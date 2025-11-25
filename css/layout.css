@@ -1,0 +1,89 @@
+/* HEADER */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem;
+    backdrop-filter: blur(12px);
+    background: rgba(15, 23, 42, 0.6);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* HERO */
+#hero {
+    padding: 4rem 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* BERUFSERFAHRUNG */
+#berufserfahrung {
+    padding: 4rem 1rem;
+}
+
+.experience-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .experience-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* WEBPROJEKTE */
+#webprojekte {
+    padding: 4rem 1rem;
+}
+
+.featured-project {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .featured-project {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.project-image img {
+    border-radius: var(--radius-lg);
+}
+
+/* CTA */
+#cta {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.cta-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 2rem 1rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.15);
+    text-align: center;
+}
