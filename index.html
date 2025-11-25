@@ -1,10 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Wasserfallen – Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="component.css">
 </head>
-<body>
 
+<body>
+<!-- HEADER / NAVIGATION -->
+<header class="site-header">
+    <div class="brand">MICHAEL WASSERFALLEN</div>
+
+    <nav aria-label="Hauptnavigation">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="arbeiten.html">Arbeiten</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HAUPTINHALT -->
+<main>
+
+    <!-- INTRO-BEREICH -->
+    <section id="hero" aria-labelledby="hero-heading">
+        <div class="hero-content">
+            <p class="hero-subtitle">
+                Leiter Produktionsinformatik und Student
+            </p>
+            <h1 id="hero-heading">
+                Leiter Produktionsinformatik<br>
+                und Student Digital Business &amp; AI
+            </h1>
+
+            <p class="hero-text">
+                Als Leiter Produktionsinformatik bei den Digitalen Medien der Anaveo DAA bin ich verantwortlich für IT-,
+                Produktions- und Webprojekte. Parallel dazu absolviere ich den Bachelorstudiengang Digital Business &amp; AI
+                an der Berner Fachhochschule.
+            </p>
+
+            <div class="hero-actions">
+                <a href="ueber-mich.html">Lerne mich kennen</a>
+                <a href="arbeiten.html">Zu meinen Arbeiten</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BERUFSERFAHRUNG -->
+    <section id="berufserfahrung" aria-labelledby="experience-heading">
+        <header>
+            <h2 id="experience-heading">Berufserfahrung</h2>
+        </header>
+
+        <div class="experience-grid">
+            <article class="experience-card">
+                <h3>Leiter Produktionsinformatik</h3>
+                <p>
+                    Kurzbeschreibung deiner Rolle, Verantwortung und Schwerpunkte.
+                </p>
+            </article>
+
+            <article class="experience-card">
+                <h3>IT Projektleiter &amp; 3D-Spezialist</h3>
+                <p>
+                    Kurzbeschreibung – Projekte, Technologien oder besondere Aufgaben.
+                </p>
+            </article>
+
+            <article class="experience-card">
+                <h3>Technischer Support</h3>
+                <p>
+                    Kurzbeschreibung – Aufgabenbereich, Kundenkontakt, Systeme etc.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- WEB-PROJEKTARBEITEN -->
+    <section id="webprojekte" aria-labelledby="projects-heading">
+        <header>
+            <h2 id="projects-heading">Einblick in meine Web-Projektarbeiten</h2>
+        </header>
+
+        <article class="featured-project">
+            <div class="project-text">
+                <h3>Gümmi Dart Masters: Resultate Liveticker</h3>
+                <p>
+                    Konzeption und Aufbau einer webbasierten Lösung für Liveticker,
+                    Resultatdarstellung und Eventkommunikation für das Gümmi Dart Masters in Kerzers.
+                </p>
+                <a href="#" class="project-link">Jetzt ansehen</a>
+            </div>
+
+            <figure class="project-image">
+                <!-- Platzhalterbild – später ersetzen -->
+                <img src="images/guemmi-dart-masters.jpg"
+                     alt="Poster zum Event Gümmi Dart Masters mit Dartboard und Turnierinfos">
+            </figure>
+        </article>
+    </section>
+
+    <!-- CALL-TO-ACTION BEREICH -->
+    <section id="cta" aria-labelledby="cta-heading">
+        <h2 id="cta-heading">Neugierig geworden?</h2>
+        <p>
+            Lass uns austauschen – Mehr über mich, meine Kompetenzen und Projekte findest du hier!
+        </p>
+
+        <div class="cta-actions">
+            <a href="kontakt.html">Kontakt aufnehmen</a>
+            <a href="arbeiten.html">Weitere Arbeiten ansehen</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <section aria-label="Social Media">
+        <ul class="social-links">
+            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="#" aria-label="GitHub">GitHub</a></li>
+        </ul>
+    </section>
+
+    <p>&copy; 2025 Michael Wasserfallen – Portfolio Page</p>
+</footer>
 </body>
 </html>
