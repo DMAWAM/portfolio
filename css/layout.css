@@ -34,6 +34,7 @@
     top: 0;
     z-index: 10;
     padding: 1rem;
+    padding-top: 3rem;
     backdrop-filter: blur(12px);
     background: rgba(15, 23, 42, 0.6);
     border-bottom: 1px solid rgba(148, 163, 184, 0.15);
@@ -108,38 +109,101 @@
 }
 
 /* WEBPROJEKTE */
+/* =========================
+   Projekte – Layout
+   ========================= */
+
 #webprojekte {
-    padding: 4rem 1rem;
+    padding: 4.5rem 0 5rem;
 }
 
-.featured-project {
-    display: grid;
-    gap: 2rem;
+.projects-inner {
+    max-width: 72rem;          /* ~1150px */
+    margin: 0 auto;
+    padding-inline: 5rem;      /* 80px links/rechts bei Desktop */
 }
 
-@media (min-width: 768px) {
-    .featured-project {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
+.project-card {
+    max-width: 70rem; /* oder 72rem, je nach Figma */
+    width: 100%;
+}
+
+@media (max-width: 48rem) {  /* <= 768px */
+    .projects-inner {
+        padding-inline: 1.5rem;
     }
 }
 
-.project-image img {
-    border-radius: var(--radius-lg);
+/* Die große Projektkarte */
+
+./* =========================
+   Projekte – Layout
+   ========================= */
+
+#webprojekte {
+    padding: 4.5rem 0 5rem;
 }
 
-/* CTA */
-#cta {
-    text-align: center;
-    padding: 4rem 1rem;
+/* Gleiche Breite & Padding wie Berufserfahrung! */
+.projects-inner {
+    max-width: 90rem;        /* wie .experience-inner */
+    margin: 0 auto;
+    padding-inline: 5rem;    /* 80px links/rechts, wie bei Berufserfahrung */
 }
 
-.cta-actions {
-    margin-top: 1.5rem;
+@media (max-width: 48rem) {
+    .projects-inner {
+        padding-inline: 1.5rem;
+    }
+}
+
+.projects-header {
+    margin-bottom: 2.5rem;
+}
+
+/* Wrapper, der die Card zentriert */
+.project-card-wrapper {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: center;  /* Karte mittig, Titel bleibt am Grid */
 }
+
+/* Die eigentliche Card als 2-Spalten-Grid */
+.project-card {
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+@media (min-width: 56rem) {
+    .project-card {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    }
+}
+
+.project-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: flex-start;   /* wichtig: sonst Button mittig/breit */
+}
+
+.project-card__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card__media img {
+    width: 100%;
+    max-width: 22rem;
+    border-radius: 1.5rem;
+    object-fit: cover;
+}
+
 
 /* FOOTER */
 .site-footer {
