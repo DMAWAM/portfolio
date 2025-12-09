@@ -11,7 +11,7 @@
     --color-accent: #22d3ee;
     --color-accent-soft: rgba(34, 211, 238, 0.25);
 
-    --color-text-main: #e5e7eb;
+    --color-text-main: #ffffff;
     --color-text-muted: #9ca3af;
     --color-border-subtle: #1f2933;
     --color-border-strong: #4b5563;
@@ -24,7 +24,7 @@
 
     /* Typografie – Grössen */
     --font-size-xs: 0.75rem;   /* z.B. Badges, Meta */
-    --font-size-sm: 0.875rem;  /* Navigation, kleinere Labels */
+    --font-size-sm: 0.8rem;  /* Navigation, kleinere Labels */
     --font-size-base: 1rem;    /* Standard-Fliesstext */
     --font-size-lg: 1.125rem;  /* Lead-Text, Cards */
     --font-size-xl: 1.5rem;    /* Sekundäre Überschriften */

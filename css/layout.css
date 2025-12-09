@@ -1,3 +1,33 @@
+/* Globales Grid-Layout */
+
+:root {
+    --grid-columns: 12;
+    --grid-gutter: 24px;
+    --grid-margin-x: 80px;
+}
+
+.layout-grid {
+    display: grid;
+
+    grid-template-columns:
+    [full-start]
+    minmax(var(--grid-margin-x), 1fr)
+    [content-start]
+    repeat(var(--grid-columns), minmax(0, 72px))
+    [content-end]
+    minmax(var(--grid-margin-x), 1fr)
+    [full-end];
+
+    column-gap: var(--grid-gutter);
+    width: 100%;
+}
+
+.site-header,
+.site-footer {
+    width: 100%;
+
+}
+
 /* HEADER */
 .site-header {
     position: sticky;
@@ -13,37 +43,67 @@
     justify-content: space-between;
 }
 
-/* HERO */
+/* =========================
+   Hero Layout
+   ========================= */
+
 #hero {
-    padding: 4rem 1rem;
+    padding: 5rem 1.5rem 4rem;          /* Abstand zum Header + unten */
+    display: flex;
+    justify-content: center;            /* Inhalt zentriert in der Mitte der Seite */
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 760px;                   /* Breite wie im Wireframe */
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.6rem;                        /* Abstand zwischen Subtitle, H1, Text, Buttons */
 }
+
 
 .hero-actions {
     display: flex;
     gap: 1rem;
 }
 
-/* BERUFSERFAHRUNG */
+/* =========================
+   Berufserfahrung – Layout
+   ========================= */
+
+/* Äusserer Abschnitt – oben/unten Luft, kein Grid mehr */
 #berufserfahrung {
-    padding: 4rem 1rem;
+    padding: 4rem 0 4.5rem;
 }
 
+/* Innerer Container, der für die 80px Rand sorgt */
+.experience-inner {
+    max-width: 90rem;      /* 1440px = 90rem */
+    margin: 0 auto;
+    padding-inline: 5rem;  /* 80px links & rechts */
+}
+
+/* Grid-Grundlayout – mobile first */
 .experience-grid {
     display: grid;
-    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2rem;
 }
 
-@media (min-width: 768px) {
+/* Ab ~768px: 2 Spalten */
+@media (min-width: 48rem) { /* 768px */
     .experience-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 2rem;
+    }
+}
+
+/* Ab ~1200–1440px: 3 Spalten mit Figma-Werten in rem */
+@media (min-width: 75rem) { /* 1200px */
+    .experience-grid {
+        grid-template-columns: repeat(3, 23.75rem); /* 380px */
+        column-gap: 4.1875rem;                      /* 67px */
+        justify-content: center;                    /* zentriert im Container */
     }
 }
 

@@ -27,14 +27,6 @@ header nav a:hover {
     color: var(--color-text-main);
 }
 
-/* Experience Cards */
-.experience-card {
-    padding: 1.25rem;
-    background: rgba(15, 23, 42, 0.7);
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(148, 163, 184, 0.3);
-}
-
 /* Featured Project */
 .featured-project .project-text a.project-link {
     display: inline-block;
@@ -58,3 +50,151 @@ header nav a:hover {
 #cta a:hover {
     background: rgba(15, 23, 42, 1);
 }
+
+/* =========================
+   Home: Hero-Section
+   ========================= */
+
+.hero-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+#hero-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-3xl);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+}
+
+.hero-text {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 48rem;                  /* etwas schmaler Fliesstext */
+}
+
+/* Buttons im Hero */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.6rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Erster Link = Primärbutton */
+.hero-actions a:first-child {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    color: #020617;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.9);
+}
+
+/* Zweiter Link = Ghost-Button */
+.hero-actions a:last-child {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    color: var(--color-text-main);
+}
+
+.hero-actions a:last-child:hover {
+    background: rgba(15, 23, 42, 1);
+}
+
+/* Zwischentitel - Section title */
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: var(--color-text-main);
+    margin: 0 0 1.75rem;
+}
+
+/* Variante mit Unterstreichung wie im Wireframe */
+.section-title--underline {
+    position: relative;
+    padding-bottom: 0.6rem;        /* Abstand zur Linie */
+}
+
+.section-title--underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5rem;                   /* Länge der Linie ~80px */
+    height: 0.22rem;               /* ca. 3–4px */
+    border-radius: 999px;
+    background: #a855f7;           /* violett wie im Wireframe */
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.7);
+}
+
+/* =========================
+   Berufserfahrung – Cards
+   ========================= */
+
+.experience-card {
+    min-height: 13.5625rem;   /* 217px – min-height, damit Text nicht überläuft */
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+    background: rgba(12, 17, 35, 0.55);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    backdrop-filter: blur(6px);
+    box-shadow:
+            0 0 18px 3px rgba(103, 135, 255, 0.20),   /* großer blauer Glow */
+            0 0 12px 2px rgba(168, 85, 247, 0.15),     /* violetter sekundärer Glow */
+            0 4px 12px rgba(0, 0, 0, 0.45) inset;
+
+}
+
+.experience-card h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+}
+
+.experience-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.exp-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;               /* ~20px */
+    font-weight: 600;
+    color: #A5B4FC;                   /* helles Indigo wie im Wireframe */
+    margin-bottom: 0.5rem;
+}
+
+.exp-meta {
+    font-size: 0.875rem;              /* 14px */
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.meta-divider {
+    opacity: 0.5;
+}
+
+.exp-text {
+    font-size: 0.9375rem;             /* 15px */
+    line-height: 1.55;
+    color: var(--color-text-main);
+}
+
