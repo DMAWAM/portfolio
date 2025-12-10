@@ -326,3 +326,30 @@ header nav a:hover {
 .btn-cta--ghost:hover {
     background: rgba(15, 23, 42, 0.95);
 }
+
+/* =========================
+   Footer – Icons & Text
+   ========================= */
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.footer-icon img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.footer-icon:hover img {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.footer-copy {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}

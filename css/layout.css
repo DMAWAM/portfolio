@@ -243,11 +243,38 @@
     gap: 1rem;
 }
 
+/* =========================
+   Footer – Layout
+   ========================= */
 
-
-/* FOOTER */
 .site-footer {
-    padding: 2rem 1rem;
-    border-top: 1px solid rgba(148, 163, 184, 0.15);
-    text-align: center;
+    padding: 3rem 0 2rem;
+}
+
+/* Container mit derselben Breite wie die Sections */
+.footer-container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding-inline: 5rem; /* = 80px links + rechts */
+}
+
+/* Linie mit gleicher Breite wie der Content */
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(148, 163, 184, 0.35);
+}
+
+/* Footer-Inhalt bleibt zentriert */
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 48rem) {
+    .footer-container {
+        padding-inline: 1.5rem;
+    }
 }
