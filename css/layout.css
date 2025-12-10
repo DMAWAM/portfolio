@@ -204,6 +204,46 @@
     object-fit: cover;
 }
 
+/* CTA – Layout */
+
+#cta {
+    padding: 4rem 0 5rem;
+}
+
+.cta-inner {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding-inline: 5rem;      /* wie bei den anderen Sections */
+}
+
+@media (max-width: 48rem) {
+    .cta-inner {
+        padding-inline: 1.5rem;
+    }
+}
+
+.cta-card {
+    border-radius: 2rem;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;    /* Buttons unter den Text */
+    align-items: flex-start;   /* alles linksbündig */
+    gap: 1.5rem;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
 
 /* FOOTER */
 .site-footer {
