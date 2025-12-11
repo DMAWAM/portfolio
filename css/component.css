@@ -1,9 +1,8 @@
 /* Brand / Name im Header */
 .brand {
     font-family: var(--font-heading);
-    font-weight: 600;
     letter-spacing: 0.06em;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xl);
     text-transform: uppercase;
 }
 
@@ -26,6 +25,41 @@ header nav a.active,
 header nav a:hover {
     color: var(--color-text-main);
 }
+
+/* ===================================
+   Navigation CTA Button (Kontakt)
+   =================================== */
+
+.nav-link--cta {
+    padding: 0.35rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: var(--color-text-main);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow:
+            0 0 6px rgba(255, 255, 255, 0.15),
+            0 0 18px rgba(168, 85, 247, 0.20);
+    transition:
+            background 150ms ease,
+            border-color 150ms ease,
+            box-shadow 150ms ease,
+            transform 150ms ease,
+            color 150ms ease;
+}
+
+/* Hover Style */
+.nav-link--cta:hover {
+    background: linear-gradient(135deg, #f973ff, #38bdf8);
+    color: #020617;
+    border-color: transparent;
+    box-shadow:
+            0 0 12px rgba(249, 115, 255, 0.45),
+            0 0 24px rgba(56, 189, 248, 0.35),
+            0 4px 24px rgba(0, 0, 0, 0.6);
+
+    transform: translateY(-1px);
+}
+
 
 /* Featured Project */
 .featured-project .project-text a.project-link {
@@ -84,15 +118,26 @@ header nav a:hover {
     box-shadow: 0 16px 36px rgba(15, 23, 42, 0.9);
 }
 
+.hero-actions a:first-child:hover {
+    background: linear-gradient(135deg, #f973ff, #38bdf8);
+    color: #020617;
+    border-color: transparent;
+    box-shadow: 0 0 12px rgba(249, 115, 255, 0.45), 0 0 24px rgba(56, 189, 248, 0.35), 0 4px 24px rgba(0, 0, 0, 0.6);
+    transform: translateY(-1px);
+}
+
 /* Zweiter Link = Ghost-Button */
 .hero-actions a:last-child {
-    background: rgba(15, 23, 42, 0.85);
+    background: transparent;
     border: 1px solid rgba(148, 163, 184, 0.35);
     color: var(--color-text-main);
 }
 
 .hero-actions a:last-child:hover {
-    background: rgba(15, 23, 42, 1);
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 0 12px rgba(249, 115, 255, 0.45), 0 0 24px rgba(56, 189, 248, 0.35), 0 4px 24px rgba(0, 0, 0, 0.6);
+    transform: translateY(-1px);
+
 }
 
 /* Zwischentitel - Section title */
@@ -238,21 +283,13 @@ header nav a:hover {
     text-decoration: none;
     border: 1px solid rgba(226, 232, 240, 0.65);
     color: var(--color-text-main);
-    background: rgba(15, 23, 42, 0.9);
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.8);
-    transition:
-            transform 150ms ease,
-            box-shadow 150ms ease,
-            background 150ms ease,
-            border-color 150ms ease;
+    background: transparent;
 }
 
 .project-cta:hover {
-    background: linear-gradient(135deg, #f973ff, #38bdf8);
-    color: #020617;
-    border-color: transparent;
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 0 12px rgba(249, 115, 255, 0.45), 0 0 24px rgba(56, 189, 248, 0.35), 0 4px 24px rgba(0, 0, 0, 0.6);
     transform: translateY(-1px);
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
 }
 
 /* =========================
@@ -306,14 +343,17 @@ header nav a:hover {
 
 /* Primärer Button (links) */
 .btn-cta--primary {
-    background: linear-gradient(135deg, #f973ff, #38bdf8);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     color: #020617;
     box-shadow: 0 14px 32px rgba(15, 23, 42, 0.9);
 }
 
 .btn-cta--primary:hover {
+    background: linear-gradient(135deg, #f973ff, #38bdf8);
+    color: #020617;
+    border-color: transparent;
+    box-shadow: 0 0 12px rgba(249, 115, 255, 0.45), 0 0 24px rgba(56, 189, 248, 0.35), 0 4px 24px rgba(0, 0, 0, 0.6);
     transform: translateY(-1px);
-    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.95);
 }
 
 /* Sekundärer Button (rechts) */
@@ -325,6 +365,8 @@ header nav a:hover {
 
 .btn-cta--ghost:hover {
     background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 0 12px rgba(249, 115, 255, 0.45), 0 0 24px rgba(56, 189, 248, 0.35), 0 4px 24px rgba(0, 0, 0, 0.6);
+    transform: translateY(-1px);
 }
 
 /* =========================

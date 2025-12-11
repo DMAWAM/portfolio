@@ -32,13 +32,22 @@
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 10;
-    padding: 1rem;
-    padding-top: 3rem;
-    backdrop-filter: blur(12px);
-    background: rgba(15, 23, 42, 0.6);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    z-index: 100;
+    width: 100%;
+    background: linear-gradient(
+            to bottom,
+            rgba(2, 6, 23, 0.95) 0%,      /* kräftiger am oberen Rand */
+            rgba(2, 6, 23, 0.80) 40%,     /* weichere Mitte */
+            rgba(2, 6, 23, 0.00) 100%     /* Ausblendung */
+    );
+}
 
+.header-inner {
+    max-width: 90rem;          /* wie experience-inner, projects-inner, cta-inner, footer-container */
+    margin: 0 auto;
+    padding-inline: 5rem;      /* 80px links/rechts */
+    padding-bottom: 2rem;
+    height: 10rem;              /* Header-Höhe */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,7 +70,6 @@
     flex-direction: column;
     gap: 1.6rem;                        /* Abstand zwischen Subtitle, H1, Text, Buttons */
 }
-
 
 .hero-actions {
     display: flex;
@@ -136,7 +144,7 @@
 
 /* Die große Projektkarte */
 
-./* =========================
+/* =========================
    Projekte – Layout
    ========================= */
 
