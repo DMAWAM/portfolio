@@ -1,10 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekte · Michael Wasserfallen</title>
+    <meta name="description" content="Aktuelle Arbeit & zukünftige Projekte." />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/component.css" />
 </head>
+
 <body>
 
+<!-- Header: identisch zur Homepage -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">MICHAEL WASSERFALLEN</div>
+
+        <nav class="main-nav" aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="arbeiten.html">Arbeiten</a></li>
+                <li><a href="ueber-mich.html">Über mich</a></li>
+                <li><a href="kontakt.html" class="nav-link nav-link--cta">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="content" class="site-main">
+    <!-- Hero: gleiche Hero-Struktur wie Home, nur Modifier -->
+    <section class="hero hero--projects">
+        <div class="container hero__inner">
+            <h1 class="hero__title">Projekte</h1>
+            <p class="hero__lead">
+                Ein Projekt im Fokus – weitere folgen laufend.
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Projekt: Card + Grid wiederverwenden -->
+    <section class="section">
+        <div class="container">
+            <article class="card card--featured">
+                <div class="grid grid--projects">
+                    <div class="stack">
+                        <h2 class="card__title">Gümmi Dart Masters – Resultate &amp; Liveticker</h2>
+                        <p class="card__text">
+                            Weblösung für Live-Erfassung von Resultaten, Anzeige auf Screens vor Ort und Auswertung für Organisatoren.
+                        </p>
+
+                        <ul class="tag-list">
+                            <li class="tag">Web App</li>
+                            <li class="tag">Realtime</li>
+                            <li class="tag">Organisation</li>
+                        </ul>
+
+                        <div class="actions">
+                            <a class="btn btn--primary" href="./projekt-detail.html">Projekt ansehen</a>
+                            <a class="btn btn--ghost" href="./kontakt.html">Kontakt</a>
+                        </div>
+                    </div>
+
+                    <figure class="media">
+                        <!-- später img -->
+                        <div class="media-placeholder">
+                            <p>Platzhalter für Screenshot</p>
+                        </div>
+                    </figure>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Weitere Projekte / Coming soon -->
+    <section class="section">
+        <div class="container">
+            <header class="section__header">
+                <h2 class="section__title">Weitere Projekte</h2>
+                <p class="section__subtitle">Coming soon.</p>
+            </header>
+
+            <ul class="grid grid--3">
+                <li><article class="card card--placeholder"><p>Coming soon</p></article></li>
+                <li><article class="card card--placeholder"><p>Coming soon</p></article></li>
+                <li><article class="card card--placeholder"><p>Coming soon</p></article></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="card card--cta">
+                <div class="stack">
+                    <h2 class="card__title">Interesse an einem Projekt?</h2>
+                    <p class="card__text">Schreib mir kurz, was du vorhast – ich melde mich.</p>
+                    <div class="actions">
+                        <a class="btn btn--primary" href="./kontakt.html">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-line"></div>
+
+        <div class="footer-inner">
+            <div class="footer-social">
+                <a class="footer-icon"><img src="assets/instagram.png" alt="instagram"></a>
+                <a class="footer-icon"><img src="assets/github.png" alt="github"></a>
+                <a class="footer-icon"><img src="assets/mail.png" alt="mail"></a>
+            </div>
+
+            <p class="footer-copy">
+                © 2025 Michael Wasserfallen – Portfolio
+            </p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

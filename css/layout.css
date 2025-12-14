@@ -57,15 +57,33 @@
    Hero Layout
    ========================= */
 
+/* HERO – Layout */
+
 #hero {
-    padding: 5rem 1.5rem 4rem;          /* Abstand zum Header + unten */
-    display: flex;
-    justify-content: center;            /* Inhalt zentriert in der Mitte der Seite */
+    position: relative;
+    padding: 6rem 0 4rem;
+}
+
+.hero-inner {
+    max-width: 90rem;               /* wie experience-inner, projects-inner, footer-container */
+    margin: 0 auto;
+    padding-inline: 5rem;           /* 80px links/rechts */
+}
+
+@media (max-width: 48rem) {
+    .hero-inner {
+        padding-inline: 1.5rem;
+    }
+
+    #hero {
+        min-height: auto;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
 }
 
 .hero-content {
     width: 100%;
-    max-width: 760px;                   /* Breite wie im Wireframe */
     display: flex;
     flex-direction: column;
     gap: 1.6rem;                        /* Abstand zwischen Subtitle, H1, Text, Buttons */
@@ -284,5 +302,24 @@
 @media (max-width: 48rem) {
     .footer-container {
         padding-inline: 1.5rem;
+    }
+}
+
+
+/*--- Arbeiten ---*/
+
+/* Wenn du "stack" und "actions" noch nicht hast: */
+.stack { display: grid; gap: 1rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+
+/* Featured-Projekt: 2 Spalten ab Desktop, sonst 1 */
+.grid--projects {
+    display: grid;
+    gap: 1.25rem;
+}
+@media (min-width: 900px) {
+    .grid--projects {
+        grid-template-columns: 1.2fr .8fr;
+        align-items: center;
     }
 }
