@@ -1,19 +1,30 @@
 <!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekte · Michael Wasserfallen</title>
-    <meta name="description" content="Aktuelle Arbeit & zukünftige Projekte." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arbeiten · Portfolio</title>
 
+    <!-- Google Fonts: Space Grotesk + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+    />
+
+
+    <!-- Deine bestehenden Styles -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/component.css" />
+
+    <!-- Page-spezifisch (klein halten) -->
+    <link rel="stylesheet" href="css/arbeiten.css" />
 </head>
 
-<body>
 
-<!-- Header: identisch zur Homepage -->
+<body class="page page--arbeiten">
+<!-- HEADER / NAVIGATION -->
 <header class="site-header">
     <div class="header-inner">
         <div class="brand">MICHAEL WASSERFALLEN</div>
@@ -29,82 +40,103 @@
     </div>
 </header>
 
-<main id="content" class="site-main">
-    <!-- Hero: gleiche Hero-Struktur wie Home, nur Modifier -->
-    <section class="hero hero--projects">
-        <div class="container hero__inner">
-            <h1 class="hero__title">Projekte</h1>
-            <p class="hero__lead">
-                Ein Projekt im Fokus – weitere folgen laufend.
-            </p>
+<main class="content-inner" id="content">
+
+    <!-- ARBEITEN HERO (gleicher Container wie Home-Hero: hero-inner) -->
+    <section id="arbeiten-hero" aria-labelledby="arbeiten-hero-heading">
+        <div class="hero-inner">
+            <div class="arbeiten-hero-card">
+                <span class="arbeiten-hero-chip">ARBEITEN</span>
+                <h1 id="arbeiten-hero-heading" class="arbeiten-hero-title">Arbeiten</h1>
+                <p class="arbeiten-hero-lead">Einblick in meine aktuelle Tätigkeit sowie ein privates Webprojekt als praxisnahes Beispiel meiner Arbeit.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Featured Projekt: Card + Grid wiederverwenden -->
-    <section class="section">
-        <div class="container">
-            <article class="card card--featured">
-                <div class="grid grid--projects">
-                    <div class="stack">
-                        <h2 class="card__title">Gümmi Dart Masters – Resultate &amp; Liveticker</h2>
-                        <p class="card__text">
-                            Weblösung für Live-Erfassung von Resultaten, Anzeige auf Screens vor Ort und Auswertung für Organisatoren.
-                        </p>
+    <!-- AKTUELLE TÄTIGKEIT (nutzt experience-inner für identische 80px Ränder) -->
+    <section id="arbeiten-aktuell" aria-labelledby="arbeiten-aktuell-heading">
+        <div class="experience-inner">
+            <header>
+                <h2 id="arbeiten-aktuell-heading" class="section-title section-title--underline">
+                    Aktuelle Tätigkeit
+                </h2>
+            </header>
 
-                        <ul class="tag-list">
-                            <li class="tag">Web App</li>
-                            <li class="tag">Realtime</li>
-                            <li class="tag">Organisation</li>
-                        </ul>
-
-                        <div class="actions">
-                            <a class="btn btn--primary" href="./projekt-detail.html">Projekt ansehen</a>
-                            <a class="btn btn--ghost" href="./kontakt.html">Kontakt</a>
-                        </div>
-                    </div>
-
-                    <figure class="media">
-                        <!-- später img -->
-                        <div class="media-placeholder">
-                            <p>Platzhalter für Screenshot</p>
-                        </div>
-                    </figure>
-                </div>
+            <!-- gleiche Card-Optik wie Home "Berufserfahrung" -->
+            <article class="experience-card">
+                <h3 class="exp-title">Leiter Produktionsinformatik</h3>
+                <p class="exp-meta">
+                    <span>Heute</span>
+                    <span class="meta-divider">|</span>
+                    <span>Systeme, Prozesse & Integration</span>
+                </p>
+                <p class="exp-text">
+                    Verantwortung für Betrieb, Weiterentwicklung und Transparenz – Fokus auf Effizienz, Stabilität und nachhaltige Lösungen.
+                </p>
             </article>
         </div>
     </section>
 
-    <!-- Weitere Projekte / Coming soon -->
-    <section class="section">
-        <div class="container">
-            <header class="section__header">
-                <h2 class="section__title">Weitere Projekte</h2>
-                <p class="section__subtitle">Coming soon.</p>
+    <!-- TÄTIGKEITEN & VERANTWORTUNGEN (1:1 als 3er Grid wie experience-grid) -->
+    <section id="arbeiten-verantwortung" aria-labelledby="arbeiten-verantwortung-heading">
+        <div class="experience-inner">
+            <header>
+                <h2 id="arbeiten-verantwortung-heading" class="section-title section-title--underline">
+                    Tätigkeiten & Verantwortungen
+                </h2>
             </header>
 
-            <ul class="grid grid--3">
-                <li><article class="card card--placeholder"><p>Coming soon</p></article></li>
-                <li><article class="card card--placeholder"><p>Coming soon</p></article></li>
-                <li><article class="card card--placeholder"><p>Coming soon</p></article></li>
-            </ul>
-        </div>
-    </section>
+            <div class="experience-grid">
+                <article class="experience-card">
+                    <h3 class="exp-title">Fokus</h3>
+                    <p class="exp-text">• Prozess- & Systemdesign<br>• Integration & Schnittstellen<br>• Betrieb, Stabilität & Support<br>• Stakeholder-Alignment<br>• Priorisierung / Roadmap</p>
+                </article>
 
-    <!-- CTA -->
-    <section class="section">
-        <div class="container">
-            <div class="card card--cta">
-                <div class="stack">
-                    <h2 class="card__title">Interesse an einem Projekt?</h2>
-                    <p class="card__text">Schreib mir kurz, was du vorhast – ich melde mich.</p>
-                    <div class="actions">
-                        <a class="btn btn--primary" href="./kontakt.html">Kontakt aufnehmen</a>
-                    </div>
-                </div>
+                <article class="experience-card">
+                    <h3 class="exp-title">Tools</h3>
+                    <p class="exp-text">• Jira / Confluence<br>• SQL / Datenanalyse<br>• APIs / Integration<br>• Git / CI Basics<br>• Monitoring / Logs</p>
+                </article>
+
+                <article class="experience-card">
+                    <h3 class="exp-title">Impact</h3>
+                    <p class="exp-text">• Kürzere Durchlaufzeiten<br>• Weniger Medienbrüche<br>• Mehr Transparenz<br>• Stabilere Abläufe<br>• Bessere Planbarkeit</p>
+                </article>
             </div>
         </div>
     </section>
+
+    <!-- PRIVATES PROJEKT (nutzt projects-inner + project-card wie Homepage) -->
+    <section id="arbeiten-projekt" aria-labelledby="arbeiten-projekt-heading">
+        <div class="projects-inner">
+            <header class="projects-header">
+                <h2 id="arbeiten-projekt-heading" class="section-title section-title--underline">
+                    Privates Projekt
+                </h2>
+            </header>
+
+            <div class="project-card-wrapper">
+                <article class="project-card arbeiten-project-card">
+                    <div class="project-card__content">
+                        <h3 class="project-title">Dart Liveticker Web-App</h3>
+                        <p class="project-text">
+                            Live-Scoring, Matchübersicht, Mobile-First UI – gebaut als schlanke Web-App.
+                        </p>
+                        <a href="#" class="project-cta" aria-disabled="true">Projekt ansehen →</a>
+                    </div>
+
+                    <figure class="project-card__media">
+                        <div class="arbeiten-media-placeholder" role="img" aria-label="Platzhalter für Screenshot oder Mockup">
+                            Screenshot / Mockup
+                        </div>
+                    </figure>
+                </article>
+            </div>
+        </div>
+    </section>
+
 </main>
+
+
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -124,5 +156,8 @@
         </div>
     </div>
 </footer>
+
+<script src="js/animations.js"></script>
+
 </body>
 </html>

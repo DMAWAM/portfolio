@@ -1,0 +1,69 @@
+/* Arbeiten – page-spezifisch (nutzt Home-Designsystem aus base.css) */
+
+/* Section Spacing analog zur Homepage */
+#arbeiten-hero { padding: 3.5rem 0 2.5rem; }
+#arbeiten-aktuell { padding: 3.5rem 0 2.5rem; }
+#arbeiten-verantwortung { padding: 2.5rem 0 3.5rem; }
+#arbeiten-projekt { padding: 3.5rem 0 5rem; }
+
+/* HERO CARD exakt wie Wireframe: große Box mit Gradient-Rand */
+.arbeiten-hero-card{
+    position: relative;
+    border-radius: 2rem;
+    padding: 2.25rem 2.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
+}
+
+.arbeiten-hero-chip{
+    display: inline-flex;
+    align-items: center;
+    height: 28px;
+    padding: 0 14px;
+    border-radius: 999px;
+
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    background: linear-gradient(135deg, #f973ff, #38bdf8);
+    color: #020617;
+}
+
+.arbeiten-hero-title{
+    margin-top: 1rem;
+    font-size: clamp(2.4rem, 3.4vw, 3.4rem);
+    line-height: 1.1;
+}
+
+.arbeiten-hero-lead{
+    margin: 0.35rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+/* Projekt: Screenshot-Platzhalter (ohne neues Card-System) */
+.arbeiten-media-placeholder{
+    width: 100%;
+    min-height: 220px;
+    border-radius: 1.5rem;
+
+    display: grid;
+    place-items: center;
+
+    background:
+            radial-gradient(circle at top left, rgba(168, 85, 247, 0.18), transparent 60%),
+            radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.18), transparent 65%),
+            rgba(12, 17, 35, 0.55);
+
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    color: var(--color-text-muted);
+}
+
+/* Mobile: gleiche Paddings wie Home */
+@media (max-width: 48rem){
+    #arbeiten-hero { padding: 3rem 0 2rem; }
+    .arbeiten-hero-card{ padding: 1.75rem 1.5rem; }
+}

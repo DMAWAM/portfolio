@@ -22,6 +22,12 @@
     width: 100%;
 }
 
+.content-inner{
+    max-width: 90rem;
+    margin: 0 auto;
+
+}
+
 .site-header,
 .site-footer {
     width: 100%;
@@ -93,6 +99,7 @@
     display: flex;
     gap: 1rem;
 }
+
 
 /* =========================
    Berufserfahrung – Layout

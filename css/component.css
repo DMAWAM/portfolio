@@ -169,6 +169,30 @@ header nav a:hover {
     box-shadow: 0 0 18px rgba(168, 85, 247, 0.7);
 }
 
+/* Highlights- und Akzente */
+
+.module {
+    position: relative;
+    border-radius: 2rem;
+    padding: 3rem;
+    background: rgba(15, 18, 40, 0.65);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+}
+
+[data-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+[data-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 /* =========================
    Berufserfahrung – Cards
    ========================= */
