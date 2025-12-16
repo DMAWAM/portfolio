@@ -191,11 +191,11 @@
             <div class="project-card-wrapper">
                 <article class="project-card arbeiten-project-card">
                     <div class="project-card__content">
-                        <h3 class="project-title">Dart Liveticker Web-App</h3>
+                        <h3 class="project-title">Gümmi Dart Masters: Resultate Liveticker </h3>
                         <p class="project-text">
                             Live-Scoring, Matchübersicht, Mobile-First UI – gebaut als schlanke Web-App.
                         </p>
-                        <a href="#" class="project-cta" aria-disabled="true">Projekt ansehen →</a>
+                        <a href="#" class="project-cta" role="button" aria-haspopup="diallog" aria-controls="projectModal" id="openProjectModal">Projekt ansehen →</a>
                     </div>
 
                     <figure class="project-card__media">
@@ -209,6 +209,34 @@
 
 </main>
 
+<dialog class="modal" id="projectModal" aria-labelledby="projectModalTitle">
+    <div class="modal__panel">
+
+        <header class="modal__header">
+            <div>
+                <p class="modal__kicker">Privates Projekt</p>
+                <h3 class="modal__title" id="projectModalTitle">
+                    Dart Liveticker Web-App
+                </h3>
+                <p class="modal__subtitle">
+                    Live-Scoring · Matchübersicht · Mobile-First
+                </p>
+            </div>
+
+            <button class="modal__close"
+                    type="button"
+                    id="closeProjectModal"
+                    aria-label="Popup schliessen">
+                ✕
+            </button>
+        </header>
+
+        <div class="modal__body">
+            <!-- dein Content -->
+        </div>
+
+    </div>
+</dialog>
 
 
 <!-- FOOTER -->
@@ -232,5 +260,6 @@
 
 <script src="js/animations.js"></script>
 <script src="js/nav.js"></script>
+<script src="js/popup.js"></script>
 </body>
 </html>

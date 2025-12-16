@@ -1,10 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontakt · Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bestehende Styles -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/component.css" />
+    <link rel="stylesheet" href="css/kontakt.css" />
+
 </head>
-<body>
+
+<body class="page page--kontakt">
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">MICHAEL WASSERFALLEN</div>
+
+        <nav id="site-nav" class="main-nav" aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="arbeiten.html">Arbeiten</a></li>
+                <li><a href="ueber-mich.html">Über mich</a></li>
+                <li><a href="kontakt.html" class="active nav-link nav-link--cta">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <button class="nav-toggle"
+                type="button"
+                aria-label="Menü öffnen"
+                aria-controls="site-nav"
+                aria-expanded="false">
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</header>
+
+<main class="content-inner" id="content">
+
+    <!-- KONTAKT -->
+    <section data-animate id="kontakt" aria-labelledby="kontakt-heading">
+        <div class="projects-inner module">
+
+            <header class="projects-header">
+                <h1 id="kontakt-heading" class="section-title section-title--underline">
+                    Kontakt
+                </h1>
+            </header>
+
+            <div class="project-card-wrapper">
+                <article class="project-card" aria-label="Kontaktformular">
+
+                    <!-- LEFT: Text -->
+                    <div class="project-card__content">
+                        <p class="hero-subtitle" style="margin:0;">Let’s talk</p>
+
+                        <h2 class="project-title" style="margin:0;">
+                            Schreib mir eine Nachricht
+                        </h2>
+
+                        <p class="project-text">
+                            Ob Projektidee, Feedback oder Austausch – ich freue mich über deine Nachricht.
+                            Am einfachsten erreichst du mich über dieses Formular.
+                        </p>
+
+                        <div class="contact-meta">
+                            <div>
+                                <strong>E-Mail:</strong>
+                                <a href="mailto:michael.wasserfallen@domain.ch">
+                                    michael.wasserfallen@domain.ch
+                                </a>
+                            </div>
+                            <div>
+                                <strong>Standort:</strong> Schweiz
+                            </div>
+                            <div>
+                                <strong>Social:</strong>
+                                <a href="#">LinkedIn</a> · <a href="#">GitHub</a>
+                            </div>
+                        </div>
+
+                        <a class="project-cta"
+                           href="mailto:michael.wasserfallen@domain.ch">
+                            Direkt per Mail →
+                        </a>
+                    </div>
+
+                    <!-- RIGHT: FORM -->
+                    <div class="project-card__media">
+
+                        <!-- 🔴 HIER NUR NOCH DEINEN FORMSPREE ENDPOINT EINSETZEN -->
+                        <form class="contact-form"
+                              action="https://formspree.io/f/mvgejdvr"
+                              method="POST">
+
+                            <!-- Formspree Optionen -->
+                            <input type="hidden" name="_subject" value="[Portfolio] Neue Kontaktanfrage">
+                            <input type="hidden" name="_template" value="table">
+
+                            <!-- Honeypot gegen Spam -->
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="vorname">Vorname</label>
+                                    <input id="vorname" name="Vorname" type="text" required>
+                                </div>
+
+                                <div class="field">
+                                    <label for="nachname">Nachname</label>
+                                    <input id="nachname" name="Nachname" type="text" required>
+                                </div>
+
+                                <div class="field field--full">
+                                    <label for="email">E-Mail</label>
+                                    <input id="email" name="E-Mail" type="email" required>
+                                </div>
+
+                                <div class="field field--full">
+                                    <label for="betreff">Betreff</label>
+                                    <input id="betreff" name="Betreff" type="text" required>
+                                </div>
+
+                                <div class="field field--full">
+                                    <label for="nachricht">Nachricht</label>
+                                    <textarea id="nachricht" name="Nachricht" rows="6" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button class="project-cta" type="submit">
+                                    Nachricht senden
+                                </button>
+                                <p class="form-hint">
+                                    Deine Nachricht wird vertraulich behandelt.
+                                </p>
+                            </div>
+                        </form>
+
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-line"></div>
+
+        <div class="footer-inner">
+            <div class="footer-social">
+                <a class="footer-icon"><img src="assets/instagram.png" alt="instagram"></a>
+                <a class="footer-icon"><img src="assets/github.png" alt="github"></a>
+                <a class="footer-icon"><img src="assets/mail.png" alt="mail"></a>
+            </div>
+
+            <p class="footer-copy">
+                © 2025 Michael Wasserfallen – Portfolio
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/animations.js"></script>
 
 </body>
 </html>

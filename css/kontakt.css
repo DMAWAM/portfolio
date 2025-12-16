@@ -1,0 +1,182 @@
+#kontakt {
+    padding: 4.5rem 0 5rem;
+}
+
+.contact-form {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.field {
+    display: grid;
+    gap: .45rem;
+}
+
+.field--full {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(12, 17, 35, 0.45);
+    color: var(--color-text-main);
+    outline: none;
+    backdrop-filter: blur(6px);
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: rgba(56, 189, 248, 0.7);
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.form-hint {
+    margin: 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.contact-meta {
+    display: grid;
+    gap: .7rem;
+    margin-top: .75rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.contact-meta a {
+    color: var(--color-text-main);
+    text-decoration: none;
+}
+
+.contact-meta a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Contact Form – Dark / Glass Inputs ===== */
+
+.field label{
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+/* Input/textarea Grundstil */
+.field input,
+.field textarea{
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    color: rgba(255,255,255,0.92);
+
+    background: linear-gradient(
+            180deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.03)
+    );
+    border: 1px solid rgba(255,255,255,0.14);
+
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
+
+    box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.08),
+            0 10px 30px rgba(0,0,0,0.25);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease, background .2s ease;
+}
+
+/* Placeholder */
+.field input::placeholder,
+.field textarea::placeholder{
+    color: rgba(255,255,255,0.45);
+}
+
+/* Hover */
+.field input:hover,
+.field textarea:hover{
+    border-color: rgba(255,255,255,0.22);
+}
+
+/* Focus (Glow) */
+.field input:focus,
+.field textarea:focus{
+    outline: none;
+    border-color: rgba(56,189,248,0.60);
+    box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.10),
+            0 0 0 4px rgba(56,189,248,0.16),
+            0 18px 45px rgba(0,0,0,0.35);
+    background: linear-gradient(
+            180deg,
+            rgba(56,189,248,0.10),
+            rgba(255,255,255,0.03)
+    );
+}
+
+/* Textarea: nicer resizing */
+.field textarea{
+    resize: vertical;
+    min-height: 160px;
+}
+
+/* Browser Autofill (Chrome) – verhindert “gelb/weiß” */
+.field input:-webkit-autofill,
+.field input:-webkit-autofill:hover,
+.field input:-webkit-autofill:focus{
+    -webkit-text-fill-color: rgba(255,255,255,0.92);
+    transition: background-color 9999s ease-out 0s;
+    box-shadow: 0 0 0 1000px rgba(10,12,20,0.35) inset !important;
+    border: 1px solid rgba(255,255,255,0.14);
+}
+
+/* Optional: invalid state (wenn required nicht erfüllt) */
+.field input:invalid,
+.field textarea:invalid{
+    border-color: rgba(255,255,255,0.14); /* neutral lassen, damit’s nicht “schreit” */
+}
+.field input:invalid:focus,
+.field textarea:invalid:focus{
+    border-color: rgba(255,120,120,0.60);
+    box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.10),
+            0 0 0 4px rgba(255,120,120,0.14),
+            0 18px 45px rgba(0,0,0,0.35);
+}
+
+
+@media (max-width: 48rem) {
+    #kontakt {
+        padding: 3.5rem 0 4rem;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
