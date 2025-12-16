@@ -7,6 +7,12 @@
 #arbeiten-projekt { padding: 3.5rem 0 5rem; }
 
 /* HERO CARD exakt wie Wireframe: große Box mit Gradient-Rand */
+
+.arbeiten-hero-inner {
+    max-width: 90rem;               /* wie experience-inner, projects-inner, footer-container */
+    margin: 0 auto;
+}
+
 .arbeiten-hero-card{
     position: relative;
     border-radius: 2rem;
@@ -45,6 +51,167 @@
 }
 
 /* Aktuelle Tätigkeit Text */
+
+/* =========================
+   Current Role (Variante A)
+   ========================= */
+
+.current-role__wrap {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 3.5rem;
+}
+
+.current-role__panel {
+    margin-top: 1.25rem;
+    border-radius: 24px;
+    padding: 1.5rem;
+    background: linear-gradient(
+            180deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.02)
+    );
+    border: 1px solid rgba(180, 120, 255, 0.18);
+    box-shadow:
+            0 0 0 1px rgba(120, 80, 255, 0.12) inset,
+            0 18px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+.current-role__grid {
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Left text */
+.current-role__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.70);
+}
+
+.current-role__meta-pill {
+    display: inline-flex;
+    align-items: center;
+    height: 28px;
+    padding: 0 0.75rem;
+    border-radius: 999px;
+    background: rgba(180, 120, 255, 0.14);
+    border: 1px solid rgba(180, 120, 255, 0.22);
+    color: rgba(210, 170, 255, 0.95);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.current-role__meta-sep {
+    opacity: 0.5;
+}
+
+.current-role__title {
+    margin: 0 0 0.85rem;
+    font-size: clamp(1.1rem, 1.2vw + 0.9rem, 1.5rem);
+    letter-spacing: 0.01em;
+}
+
+.current-role__text p {
+    margin: 0 0 0.9rem;
+    max-width: 62ch;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.72);
+}
+
+/* Right column focus cards */
+.current-role__focus {
+    display: grid;
+    gap: 1rem;
+}
+
+.focus-card {
+    border-radius: 18px;
+    padding: 1rem;
+    background: rgba(10, 12, 24, 0.45);
+    border: 1px solid rgba(180, 120, 255, 0.16);
+    box-shadow: 0 0 0 1px rgba(120, 80, 255, 0.10) inset;
+    transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(180, 120, 255, 0.28);
+}
+
+.focus-card__top {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.focus-card__icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(180, 120, 255, 0.14);
+    border: 1px solid rgba(180, 120, 255, 0.20);
+    font-size: 0.95rem;
+}
+
+.focus-card__title {
+    margin: 0;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.92);
+}
+
+.focus-card__text {
+    margin: 0 0 0.75rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.70);
+}
+
+.focus-card__tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.focus-card__tags li {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.72);
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 855px) {
+    .current-role__wrap {
+        padding-inline: 2rem; /* wie du es wolltest */
+    }
+
+    .current-role__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .current-role__text p {
+        max-width: 100%;
+    }
+}
+
 
 .role-text{
     max-width: 72ch;

@@ -52,17 +52,17 @@
 
     <!-- ARBEITEN HERO (gleicher Container wie Home-Hero: hero-inner) -->
     <section id="arbeiten-hero" aria-labelledby="arbeiten-hero-heading">
-        <div class="hero-inner">
+        <div class="arbeiten-hero-inner">
             <div class="arbeiten-hero-card">
                 <span class="arbeiten-hero-chip">ARBEITEN</span>
                 <h1 id="arbeiten-hero-heading" class="arbeiten-hero-title">Arbeiten & Projekte</h1>
-                <p class="arbeiten-hero-lead">Einblick in meine aktuelle Tätigkeit sowie ein privates Webprojekt als praxisnahes Beispiel meiner Arbeit.</p>
+                <p class="arbeiten-hero-lead">Einblick in meine aktuelle Tätigkeit sowie ein privates Webprojekt als praxisnahes Beispiel meiner Arbeit aus dem Bereich Web-Engineering.</p>
             </div>
         </div>
     </section>
 
     <!-- AKTUELLE TÄTIGKEIT (nutzt experience-inner für identische 80px Ränder) -->
-    <section id="arbeiten-aktuell" aria-labelledby="arbeiten-aktuell-heading">
+    <section data-animate id="arbeiten-aktuell" aria-labelledby="arbeiten-aktuell-heading">
         <div class="experience-inner module">
             <header>
                 <h2 id="arbeiten-aktuell-heading" class="section-title section-title--underline">
@@ -71,21 +71,83 @@
             </header>
 
             <!-- gleiche Card-Optik wie Home "Berufserfahrung" -->
-            <article class="experience-card">
-                <h3 class="exp-title">Leiter Produktionsinformatik</h3>
-                <p class="exp-meta">
-                    <span>Heute</span>
-                    <span class="meta-divider">|</span>
-                    <span>Systeme, Prozesse & Integration</span>
-                </p>
-                <p class="role-text">
-                    In meiner Rolle als Leiter Produktions-IT im DMA verantworte ich sowohl die strategische als auch die operative Weiterentwicklung der gesamten produktionsspezifischen Informatik. Dabei übernehme ich die Funktion des IKT-Verantwortlichen und agiere als zentrale Schnittstelle zwischen den internen Fachbereichen sowie externen Partnern wie der IK LBA, dem BIT und weiteren IKT-Stellen.
+            <section class="current-role section">
+                <div class="current-role__wrap">
+                    <header class="current-role__header">
+                        <span class="section-accent-line"></span>
+                    </header>
 
-                    Ich leite und koordiniere Projekte zur Einführung und Weiterentwicklung von IT-Lösungen entlang der gesamten Wertschöpfungskette – von Produktion und Distribution über Archivierung bis hin zu Plattformen. In enger Zusammenarbeit mit Fachverantwortlichen und externen Partnern begleite ich die technische Umsetzung und stelle sicher, dass Lösungen nachhaltig und praxisnah umgesetzt werden.
+                    <div class="current-role__panel">
+                        <div class="current-role__grid">
+                            <!-- LEFT: Text -->
+                            <div class="current-role__text">
+                                <p class="current-role__meta">
+                                    <span class="current-role__meta-pill">Heute</span>
+                                    <span class="current-role__meta-sep">|</span>
+                                    Aufgabenbereich &amp; Ziele der Funktion
+                                </p>
 
-                    Neben der Projektarbeit liegt ein zentraler Fokus meiner Tätigkeit im stabilen Betrieb der Systeme. Ich unterstütze aktiv bei der Fehlerbehebung, stehe Anwenderinnen und Anwendern beratend zur Seite und treibe gleichzeitig die technologische Weiterentwicklung der Produktions-IT kontinuierlich voran.
-                </p>
-            </article>
+                                <h3 class="current-role__title">Leiter Produktionsinformatik</h3>
+
+                                <p>
+                                    In meiner Rolle als Leiter Produktions-IT im DMA verantworte ich sowohl die strategische als
+                                    auch die operative Weiterentwicklung der gesamten produktionsspezifischen Informatik.
+                                    Dabei übernehme ich die Funktion des IKT-Verantwortlichen und agiere als zentrale Schnittstelle
+                                    zwischen den internen Fachbereichen sowie externen Partnern wie der IK LBA, dem BIT und weiteren IKT-Stellen.
+                                </p>
+                                <p>
+                                    Ich leite und koordiniere Projekte zur Einführung und Weiterentwicklung von IT-Lösungen entlang der gesamten
+                                    Wertschöpfungskette – von Produktion und Distribution über Archivierung bis hin zu Plattformen.
+                                    In enger Zusammenarbeit mit Fachverantwortlichen und externen Partnern begleite ich die technische Umsetzung
+                                    und stelle sicher, dass Lösungen nachhaltig und praxisnah umgesetzt werden.
+                                </p>
+                                <p>
+                                    Neben der Projektarbeit liegt ein zentraler Fokus meiner Tätigkeit im stabilen Betrieb der Systeme.
+                                    Ich unterstütze aktiv bei der Fehlerbehebung, stehe Anwenderinnen und Anwendern beratend zur Seite und treibe
+                                    gleichzeitig die technologische Weiterentwicklung der Produktions-IT kontinuierlich voran.
+                                </p>
+                            </div>
+
+                            <!-- RIGHT: Focus Cards -->
+                            <aside class="current-role__focus" aria-label="Schwerpunkte">
+                                <div class="focus-card">
+                                    <div class="focus-card__top">
+                                        <span class="focus-card__icon" aria-hidden="true">⚙️</span>
+                                        <h4 class="focus-card__title">IT-Portfolio &amp; Systemsteuerung</h4>
+                                    </div>
+                                    <p class="focus-card__text">Weiterentwicklung produktionsnaher Applikationen, Plattformen &amp; Schnittstellen.</p>
+                                    <ul class="focus-card__tags">
+                                        <li>Stabilität</li><li>Standards</li><li>Roadmap</li>
+                                    </ul>
+                                </div>
+
+                                <div class="focus-card">
+                                    <div class="focus-card__top">
+                                        <span class="focus-card__icon" aria-hidden="true">🧩</span>
+                                        <h4 class="focus-card__title">Koordination &amp; Schnittstellenmanagement</h4>
+                                    </div>
+                                    <p class="focus-card__text">Steuerung von Vorhaben über die Wertschöpfungskette – von Bedarf bis Go-Live.</p>
+                                    <ul class="focus-card__tags">
+                                        <li>Koordination</li><li>Partner</li><li>Delivery</li>
+                                    </ul>
+                                </div>
+
+                                <div class="focus-card">
+                                    <div class="focus-card__top">
+                                        <span class="focus-card__icon" aria-hidden="true">🛡️</span>
+                                        <h4 class="focus-card__title">Betrieb &amp; Support</h4>
+                                    </div>
+                                    <p class="focus-card__text">Sicherer Betrieb, Incident-/Problem-Support und kontinuierliche Optimierung.</p>
+                                    <ul class="focus-card__tags">
+                                        <li>Monitoring</li><li>Fehlerbehebung</li><li>Verfügbarkeit</li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </section>
 
@@ -137,9 +199,8 @@
                     </div>
 
                     <figure class="project-card__media">
-                        <div class="arbeiten-media-placeholder" role="img" aria-label="Platzhalter für Screenshot oder Mockup">
-                            Screenshot / Mockup
-                        </div>
+                        <img src="assets/dart-liveticker.png" class="arbeiten-media-placeholder" role="img" aria-label="screenshot dart liveticker">
+
                     </figure>
                 </article>
             </div>
