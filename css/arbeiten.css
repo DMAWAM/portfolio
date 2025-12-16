@@ -246,3 +246,16 @@
     #arbeiten-hero { padding: 3rem 0 2rem; }
     .arbeiten-hero-card{ padding: 1.75rem 1.5rem; }
 }
+
+@media (max-width: 500px){
+    .current-role__wrap{
+        width: 100%;
+        max-width: none;
+        padding-inline: 0;   /* wichtig: sonst bleibt innen wieder "schmal" */
+        margin-inline: 0;
+    }
+
+    .current-role__panel{
+        padding: 1.25rem;   /* etwas kompakter auf iPhone */
+    }
+}

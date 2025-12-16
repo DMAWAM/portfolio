@@ -80,16 +80,21 @@
     .hero-inner {
         padding-inline: 2rem;
     }
-    .header-inner{
+
+    .header-inner {
         padding-inline: 2rem;
     }
+
     #hero {
         min-height: auto;
         padding-top: 4rem;
         padding-bottom: 3rem;
     }
-}
 
+    .experience-inner {
+        padding-inline: 2rem;
+    }
+}
 .hero-content {
     width: 100%;
     display: flex;
@@ -330,5 +335,11 @@
     .grid--projects {
         grid-template-columns: 1.2fr .8fr;
         align-items: center;
+    }
+}
+
+@media (max-width: 500px){
+    .current-role__wrap{
+        max-width: none;
     }
 }

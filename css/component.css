@@ -692,3 +692,22 @@ header nav a:hover {
     place-items: center;
 }
 
+@media (max-width: 48rem){
+    .module{
+        padding: 1.5rem;
+        border-radius: 1.5rem; /* optional, wirkt auf Mobile oft harmonischer */
+    }
+
+    /* optional: Meta-Zeile darf umbrechen statt zu quetschen */
+    .exp-meta{
+        flex-wrap: wrap;
+        row-gap: 0.25rem;
+    }
+
+    /* optional: lange Wörter sauber umbrechen */
+    .role-text{
+        overflow-wrap: anywhere;
+        hyphens: auto;
+    }
+}
+
