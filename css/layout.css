@@ -76,11 +76,13 @@
     padding-inline: 5rem;           /* 80px links/rechts */
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 855px) {
     .hero-inner {
-        padding-inline: 1.5rem;
+        padding-inline: 2rem;
     }
-
+    .header-inner{
+        padding-inline: 2rem;
+    }
     #hero {
         min-height: auto;
         padding-top: 4rem;

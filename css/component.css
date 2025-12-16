@@ -75,6 +75,13 @@ header nav a:hover {
     background: rgba(15, 23, 42, 0.35);
     backdrop-filter: blur(8px);
     cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0;
+    line-height: 1;
+    flex: 0 0 44px;      /* verhindert "zusammendrücken" */
+    border-radius: 999px;
+    overflow: hidden;    /* falls Safari Kanten komisch rendert */
 }
 
 .nav-toggle:focus-visible{
@@ -539,6 +546,9 @@ header nav a:hover {
     font-weight: 500;
     letter-spacing: 0.02em;
     margin: 0 0 1.5rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;  /* bricht lange Wörter sauber um */
+    hyphens: auto;            /* Silbentrennung (de) */
 }
 
 /* farbiger Teil „Digital Business & AI“ */
