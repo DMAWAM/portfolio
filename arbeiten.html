@@ -29,7 +29,7 @@
     <div class="header-inner">
         <div class="brand">MICHAEL WASSERFALLEN</div>
 
-        <nav class="main-nav" aria-label="Hauptnavigation">
+        <nav id="site-nav" class="main-nav" aria-label="Hauptnavigation">
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="arbeiten.html">Arbeiten</a></li>
@@ -37,8 +37,16 @@
                 <li><a href="kontakt.html" class="nav-link nav-link--cta">Kontakt</a></li>
             </ul>
         </nav>
+
+        <button class="nav-toggle" type="button"
+                aria-label="Menü öffnen"
+                aria-controls="site-nav"
+                aria-expanded="false">
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
     </div>
 </header>
+
 
 <main class="content-inner" id="content">
 
@@ -47,7 +55,7 @@
         <div class="hero-inner">
             <div class="arbeiten-hero-card">
                 <span class="arbeiten-hero-chip">ARBEITEN</span>
-                <h1 id="arbeiten-hero-heading" class="arbeiten-hero-title">Arbeiten</h1>
+                <h1 id="arbeiten-hero-heading" class="arbeiten-hero-title">Arbeiten & Projekte</h1>
                 <p class="arbeiten-hero-lead">Einblick in meine aktuelle Tätigkeit sowie ein privates Webprojekt als praxisnahes Beispiel meiner Arbeit.</p>
             </div>
         </div>
@@ -55,7 +63,7 @@
 
     <!-- AKTUELLE TÄTIGKEIT (nutzt experience-inner für identische 80px Ränder) -->
     <section id="arbeiten-aktuell" aria-labelledby="arbeiten-aktuell-heading">
-        <div class="experience-inner">
+        <div class="experience-inner module">
             <header>
                 <h2 id="arbeiten-aktuell-heading" class="section-title section-title--underline">
                     Aktuelle Tätigkeit
@@ -70,8 +78,12 @@
                     <span class="meta-divider">|</span>
                     <span>Systeme, Prozesse & Integration</span>
                 </p>
-                <p class="exp-text">
-                    Verantwortung für Betrieb, Weiterentwicklung und Transparenz – Fokus auf Effizienz, Stabilität und nachhaltige Lösungen.
+                <p class="role-text">
+                    In meiner Rolle als Leiter Produktions-IT im DMA verantworte ich sowohl die strategische als auch die operative Weiterentwicklung der gesamten produktionsspezifischen Informatik. Dabei übernehme ich die Funktion des IKT-Verantwortlichen und agiere als zentrale Schnittstelle zwischen den internen Fachbereichen sowie externen Partnern wie der IK LBA, dem BIT und weiteren IKT-Stellen.
+
+                    Ich leite und koordiniere Projekte zur Einführung und Weiterentwicklung von IT-Lösungen entlang der gesamten Wertschöpfungskette – von Produktion und Distribution über Archivierung bis hin zu Plattformen. In enger Zusammenarbeit mit Fachverantwortlichen und externen Partnern begleite ich die technische Umsetzung und stelle sicher, dass Lösungen nachhaltig und praxisnah umgesetzt werden.
+
+                    Neben der Projektarbeit liegt ein zentraler Fokus meiner Tätigkeit im stabilen Betrieb der Systeme. Ich unterstütze aktiv bei der Fehlerbehebung, stehe Anwenderinnen und Anwendern beratend zur Seite und treibe gleichzeitig die technologische Weiterentwicklung der Produktions-IT kontinuierlich voran.
                 </p>
             </article>
         </div>
@@ -79,7 +91,7 @@
 
     <!-- TÄTIGKEITEN & VERANTWORTUNGEN (1:1 als 3er Grid wie experience-grid) -->
     <section id="arbeiten-verantwortung" aria-labelledby="arbeiten-verantwortung-heading">
-        <div class="experience-inner">
+        <div class="experience-inner module">
             <header>
                 <h2 id="arbeiten-verantwortung-heading" class="section-title section-title--underline">
                     Tätigkeiten & Verantwortungen
@@ -158,6 +170,6 @@
 </footer>
 
 <script src="js/animations.js"></script>
-
+<script src="js/nav.js"></script>
 </body>
 </html>

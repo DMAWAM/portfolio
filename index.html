@@ -22,18 +22,26 @@
 <!-- HEADER / NAVIGATION -->
 <header class="site-header">
     <div class="header-inner">
-    <div class="brand">MICHAEL WASSERFALLEN</div>
+        <div class="brand">MICHAEL WASSERFALLEN</div>
 
-    <nav class="main-nav" aria-label="Hauptnavigation">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="arbeiten.html">Arbeiten</a></li>
-            <li><a href="ueber-mich.html">Über mich</a></li>
-            <li><a href="kontakt.html" class="nav-link nav-link--cta">Kontakt</a></li>
-        </ul>
-    </nav>
+        <nav id="site-nav" class="main-nav" aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="arbeiten.html">Arbeiten</a></li>
+                <li><a href="ueber-mich.html">Über mich</a></li>
+                <li><a href="kontakt.html" class="nav-link nav-link--cta">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <button class="nav-toggle" type="button"
+                aria-label="Menü öffnen"
+                aria-controls="site-nav"
+                aria-expanded="false">
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
     </div>
 </header>
+
 
 <!-- HAUPTINHALT -->
 <main class="content-inner">
@@ -198,6 +206,6 @@
 </footer>
 
 <script src="js/animations.js"></script>
-
+<script src="js/nav.js"></script>
 </body>
 </html>
