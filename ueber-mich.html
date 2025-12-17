@@ -1,10 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Über mich · Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bestehende Styles (wie bei den anderen Seiten) -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/component.css" />
+    <link rel="stylesheet" href="css/arbeiten.css" />
 </head>
-<body>
+
+<body class="page page--ueber-mich">
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">MICHAEL WASSERFALLEN</div>
+
+        <nav id="site-nav" class="main-nav" aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="arbeiten.html">Arbeiten</a></li>
+                <li><a href="ueber-mich.html" class="active">Über mich</a></li>
+                <li><a href="kontakt.html" class="nav-link nav-link--cta">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <button class="nav-toggle"
+                type="button"
+                aria-label="Menü öffnen"
+                aria-controls="site-nav"
+                aria-expanded="false">
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</header>
+
+<main class="content-inner" id="content">
+
+    <!-- UEBER MICH HERO (gleicher Container wie Home-Hero: hero-inner) -->
+    <section id="ueber-mich-hero" class="page-hero" aria-labelledby="ueber-mich-hero-heading">
+        <div class="page-hero-inner">
+            <div class="page-hero-card">
+                <span class="page-hero-chip">ÜBER MICH</span>
+                <h1 id="ueber-mich-hero-heading" class="page-hero-title">Über mich</h1>
+                <p class="page-hero-lead">
+                    Ein paar persönliche Einblicke – Interessen, Hobbys und was mich neben der Arbeit antreibt.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HERO (gleicher Aufbau wie andere Seiten: projects-inner + section-title) -->
+    <section data-animate id="ueber-mich-hero" aria-labelledby="ueber-mich-heading">
+        <div class="projects-inner module">
+            <header class="projects-header">
+                <h1 id="ueber-mich-heading" class="section-title section-title--underline">
+                    Über mich
+                </h1>
+            </header>
+
+            <div class="project-card-wrapper">
+                <article class="project-card" aria-label="Über mich Intro">
+                    <!-- LEFT: Text -->
+                    <div class="project-card__content">
+                        <p class="hero-subtitle" style="margin:0;">Privat</p>
+
+                        <h2 class="project-title" style="margin:0;">
+                            Neugierig, strukturiert – und gerne mittendrin.
+                        </h2>
+
+                        <p class="project-text">
+                            Neben meiner Arbeit in der Produktionsinformatik mag ich Dinge, bei denen man den Kopf
+                            frei bekommt: Sport, Vereinsleben und Projekte, die einfach aus Interesse entstehen.
+                            Ich bin jemand, der gerne dranbleibt, Schritt für Schritt besser wird und dabei
+                            Wert auf gute Zusammenarbeit legt.
+                        </p>
+
+                        <a class="project-cta" href="kontakt.html">
+                            Lust auf Austausch →
+                        </a>
+                    </div>
+
+                    <!-- RIGHT: „Private Summary“ als Card-Optik (nutzt bestehende Card-Fläche) -->
+                    <div class="project-card__media" aria-label="Kurzprofil">
+                        <div class="experience-card" style="width:100%; max-width: 28rem;">
+                            <h3 class="exp-title">Kurzprofil</h3>
+                            <p class="exp-text" style="margin:0;">
+                                • Sport als Ausgleich<br>
+                                • Vereinsmensch &amp; Organisator<br>
+                                • Interesse an Web &amp; Sideprojekten<br>
+                                • Mag klare Strukturen – aber ohne unnötige Bürokratie
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- INTERESSEN / HOBBYS (nutzt experience-inner + experience-grid wie Home) -->
+    <section data-animate id="ueber-mich-interessen" aria-labelledby="interessen-heading">
+        <div class="experience-inner module">
+            <header>
+                <h2 id="interessen-heading" class="section-title section-title--underline">
+                    Interessen &amp; Hobbys
+                </h2>
+            </header>
+
+            <div class="experience-grid">
+                <article class="experience-card">
+                    <h3 class="exp-title">Krafttraining</h3>
+                    <p class="exp-text">
+                        Für mich der beste Gegenpol zum Arbeitsalltag: Fokus, Routine und messbarer Fortschritt –
+                        ohne dass es verkrampft werden muss.
+                    </p>
+                </article>
+
+                <article class="experience-card">
+                    <h3 class="exp-title">Vereinsleben</h3>
+                    <p class="exp-text">
+                        Ich engagiere mich gerne im Verein, weil es Gemeinschaft schafft – und weil man dabei
+                        Organisation, Verantwortung und Teamwork ganz praktisch erlebt.
+                    </p>
+                </article>
+
+                <article class="experience-card">
+                    <h3 class="exp-title">Events &amp; Organisation</h3>
+                    <p class="exp-text">
+                        Dinge planen, strukturieren und umsetzen macht mir Spass – vor allem, wenn am Ende ein
+                        Anlass entsteht, der Menschen zusammenbringt.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- „WAS MIR WICHTIG IST“ (ruhige Textsection, gleiche Module-Optik) -->
+    <section data-animate id="ueber-mich-werte" aria-labelledby="werte-heading">
+        <div class="experience-inner module">
+            <header>
+                <h2 id="werte-heading" class="section-title section-title--underline">
+                    Was mir wichtig ist
+                </h2>
+            </header>
+
+            <div class="experience-grid">
+                <article class="experience-card">
+                    <h3 class="exp-title">Verlässlichkeit</h3>
+                    <p class="exp-text">
+                        Absprachen einhalten, Verantwortung übernehmen, sauber liefern – auch wenn’s mal hektisch wird.
+                    </p>
+                </article>
+
+                <article class="experience-card">
+                    <h3 class="exp-title">Lernen &amp; Weiterentwickeln</h3>
+                    <p class="exp-text">
+                        Ich mag es, neue Themen wirklich zu verstehen und daraus etwas Praktisches zu machen – im Job wie privat.
+                    </p>
+                </article>
+
+                <article class="experience-card">
+                    <h3 class="exp-title">Einfach machen</h3>
+                    <p class="exp-text">
+                        Lieber eine gute Lösung iterativ bauen als ewig theoretisieren. Kleine Schritte – aber konstant.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA (gleiche Komponente wie Home) -->
+    <section data-animate id="cta" aria-labelledby="cta-heading">
+        <div class="cta-inner">
+            <article class="cta-card">
+                <div class="cta-content">
+                    <h2 id="cta-heading">Möchtest du mehr wissen?</h2>
+                    <p class="cta-text">
+                        Wenn du Fragen hast oder einfach einen Austausch suchst – schreib mir gerne.
+                    </p>
+                </div>
+
+                <div class="cta-actions">
+                    <a href="kontakt.html" class="btn-cta btn-cta--primary">
+                        Kontakt aufnehmen
+                    </a>
+                    <a href="arbeiten.html" class="btn-cta btn-cta--ghost">
+                        Zu meinen Arbeiten
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-line"></div>
+
+        <div class="footer-inner">
+            <div class="footer-social">
+                <a class="footer-icon"><img src="assets/instagram.png" alt="instagram"></a>
+                <a class="footer-icon"><img src="assets/github.png" alt="github"></a>
+                <a class="footer-icon"><img src="assets/mail.png" alt="mail"></a>
+            </div>
+
+            <p class="footer-copy">
+                © 2025 Michael Wasserfallen – Portfolio
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- JS kannst du später wieder hinzufügen -->
+<script src="js/nav.js"></script>
+<script src="js/animations.js"></script>
 
 </body>
 </html>

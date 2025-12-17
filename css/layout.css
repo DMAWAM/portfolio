@@ -107,6 +107,33 @@
     gap: 1rem;
 }
 
+/* =========================
+   Page Hero (Subpages)
+   ========================= */
+
+.page-hero{
+    position: relative;
+    padding: 3.5rem 0 2.5rem;
+}
+
+.page-hero-inner{
+    max-width: 90rem;
+    margin: 0 auto;
+    padding-inline: 5rem; /* identisch zu .hero-inner */
+}
+
+@media (max-width: 855px){
+    .page-hero-inner{
+        padding-inline: 2rem;
+    }
+}
+
+@media (max-width: 48rem){
+    .page-hero{
+        padding: 3rem 0 2rem;
+    }
+}
+
 
 /* =========================
    Berufserfahrung – Layout

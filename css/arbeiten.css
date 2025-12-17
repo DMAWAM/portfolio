@@ -1,56 +1,9 @@
 /* Arbeiten – page-spezifisch (nutzt Home-Designsystem aus base.css) */
 
-/* Section Spacing analog zur Homepage */
-#arbeiten-hero { padding: 3.5rem 0 2.5rem; }
+/* Section Spacing (Hero ist jetzt global via .page-hero in layout/component.css) */
 #arbeiten-aktuell { padding: 3.5rem 0 2.5rem; }
 #arbeiten-verantwortung { padding: 2.5rem 0 3.5rem; }
 #arbeiten-projekt { padding: 3.5rem 0 5rem; }
-
-/* HERO CARD exakt wie Wireframe: große Box mit Gradient-Rand */
-
-.arbeiten-hero-inner {
-    max-width: 90rem;               /* wie experience-inner, projects-inner, footer-container */
-    margin: 0 auto;
-}
-
-.arbeiten-hero-card{
-    position: relative;
-    border-radius: 2rem;
-    padding: 2.25rem 2.5rem;
-    border: 1px solid rgba(148, 163, 184, 0.35);
-    box-shadow: var(--shadow-soft);
-    backdrop-filter: blur(10px);
-}
-
-.arbeiten-hero-chip{
-    display: inline-flex;
-    align-items: center;
-    height: 28px;
-    padding: 0 14px;
-    border-radius: 999px;
-
-    font-size: var(--font-size-xs);
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-
-    background: linear-gradient(135deg, #f973ff, #38bdf8);
-    color: #020617;
-}
-
-.arbeiten-hero-title{
-    margin-top: 1rem;
-    font-size: clamp(2.4rem, 3.4vw, 3.4rem);
-    line-height: 1.1;
-}
-
-.arbeiten-hero-lead{
-    margin: 0.35rem 0 0;
-    color: var(--color-text-muted);
-    font-size: 0.95rem;
-}
-
-/* Aktuelle Tätigkeit Text */
 
 /* =========================
    Current Role (Variante A)
@@ -194,32 +147,13 @@
     color: rgba(255,255,255,0.72);
 }
 
-/* =========================
-   Responsive
-   ========================= */
-
-@media (max-width: 855px) {
-    .current-role__wrap {
-        padding-inline: 2rem; /* wie du es wolltest */
-    }
-
-    .current-role__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .current-role__text p {
-        max-width: 100%;
-    }
-}
-
-
+/* Text helper */
 .role-text{
     max-width: 72ch;
     line-height: 1.75;
     color: rgba(255,255,255,.75);
 }
 .role-text p + p{ margin-top: 12px; }
-
 
 /* Projekt: Screenshot-Platzhalter (ohne neues Card-System) */
 .arbeiten-media-placeholder{
@@ -239,23 +173,33 @@
     color: var(--color-text-muted);
 }
 
+/* =========================
+   Responsive
+   ========================= */
 
+@media (max-width: 855px) {
+    .current-role__wrap {
+        padding-inline: 2rem;
+    }
 
-/* Mobile: gleiche Paddings wie Home */
-@media (max-width: 48rem){
-    #arbeiten-hero { padding: 3rem 0 2rem; }
-    .arbeiten-hero-card{ padding: 1.75rem 1.5rem; }
+    .current-role__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .current-role__text p {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 500px){
     .current-role__wrap{
         width: 100%;
         max-width: none;
-        padding-inline: 0;   /* wichtig: sonst bleibt innen wieder "schmal" */
+        padding-inline: 0;
         margin-inline: 0;
     }
 
     .current-role__panel{
-        padding: 1.25rem;   /* etwas kompakter auf iPhone */
+        padding: 1.25rem;
     }
 }
