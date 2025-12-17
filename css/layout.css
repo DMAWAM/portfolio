@@ -119,7 +119,6 @@
 .page-hero-inner{
     max-width: 90rem;
     margin: 0 auto;
-    padding-inline: 5rem; /* identisch zu .hero-inner */
 }
 
 @media (max-width: 855px){
