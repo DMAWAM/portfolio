@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/component.css" />
-    <link rel="stylesheet" href="css/arbeiten.css" />
+    <link rel="stylesheet" href="css/ueber-mich.css" />
 </head>
 
 <body class="page page--ueber-mich">
@@ -60,11 +60,11 @@
 
 
     <!-- HERO (gleicher Aufbau wie andere Seiten: projects-inner + section-title) -->
-    <section data-animate id="ueber-mich-hero" aria-labelledby="ueber-mich-heading">
+    <section data-animate id="ueber-mich-kurzportrait" aria-labelledby="ueber-mich-heading">
         <div class="projects-inner module">
             <header class="projects-header">
                 <h1 id="ueber-mich-heading" class="section-title section-title--underline">
-                    Über mich
+                    Kurzportrait
                 </h1>
             </header>
 
@@ -91,17 +91,17 @@
                     </div>
 
                     <!-- RIGHT: „Private Summary“ als Card-Optik (nutzt bestehende Card-Fläche) -->
-                    <div class="project-card__media" aria-label="Kurzprofil">
-                        <div class="experience-card" style="width:100%; max-width: 28rem;">
-                            <h3 class="exp-title">Kurzprofil</h3>
-                            <p class="exp-text" style="margin:0;">
-                                • Sport als Ausgleich<br>
-                                • Vereinsmensch &amp; Organisator<br>
-                                • Interesse an Web &amp; Sideprojekten<br>
-                                • Mag klare Strukturen – aber ohne unnötige Bürokratie
-                            </p>
-                        </div>
+                    <div class="project-card__media">
+                        <figure class="portrait-wrap">
+                            <img
+                                    src="assets/portrait.png"
+                                    alt="Portrait von Michael Wasserfallen"
+                                    class="portrait-image"
+                                    loading="lazy"
+                            />
+                        </figure>
                     </div>
+
                 </article>
             </div>
         </div>
@@ -109,77 +109,50 @@
 
 
     <!-- INTERESSEN / HOBBYS (nutzt experience-inner + experience-grid wie Home) -->
-    <section data-animate id="ueber-mich-interessen" aria-labelledby="interessen-heading">
-        <div class="experience-inner module">
-            <header>
+    <section data-animate id="ueber-mich-interessen" class="hobby-band" aria-labelledby="interessen-heading">
+        <div class="hobby-band__inner module">
+            <header class="hobby-band__header">
                 <h2 id="interessen-heading" class="section-title section-title--underline">
                     Interessen &amp; Hobbys
                 </h2>
+                <p class="hobby-band__lead">
+                    Drei Dinge, die mich neben der Arbeit erden – Fokus, Strategie und Genuss.
+                </p>
             </header>
 
-            <div class="experience-grid">
-                <article class="experience-card">
-                    <h3 class="exp-title">Krafttraining</h3>
-                    <p class="exp-text">
-                        Für mich der beste Gegenpol zum Arbeitsalltag: Fokus, Routine und messbarer Fortschritt –
-                        ohne dass es verkrampft werden muss.
+            <div class="hobby-grid">
+                <article class="hobby-card">
+                    <div class="hobby-card__icon-wrap">
+                        <span class="hobby-card__icon" aria-hidden="true">🎾</span>
+                    </div>
+                    <h3 class="hobby-card__title">Tennis</h3>
+                    <p class="hobby-card__text">
+                        Ausgleich durch Bewegung, Präzision und ein klarer Kopf – am liebsten kompetitiv, aber fair.
                     </p>
                 </article>
 
-                <article class="experience-card">
-                    <h3 class="exp-title">Vereinsleben</h3>
-                    <p class="exp-text">
-                        Ich engagiere mich gerne im Verein, weil es Gemeinschaft schafft – und weil man dabei
-                        Organisation, Verantwortung und Teamwork ganz praktisch erlebt.
+                <article class="hobby-card">
+                    <div class="hobby-card__icon-wrap">
+                        <span class="hobby-card__icon" aria-hidden="true">♟️</span>
+                    </div>
+                    <h3 class="hobby-card__title">Schach</h3>
+                    <p class="hobby-card__text">
+                        Strategisch denken, Muster erkennen und Entscheidungen bewusst treffen – ruhig, aber anspruchsvoll.
                     </p>
                 </article>
 
-                <article class="experience-card">
-                    <h3 class="exp-title">Events &amp; Organisation</h3>
-                    <p class="exp-text">
-                        Dinge planen, strukturieren und umsetzen macht mir Spass – vor allem, wenn am Ende ein
-                        Anlass entsteht, der Menschen zusammenbringt.
+                <article class="hobby-card">
+                    <div class="hobby-card__icon-wrap">
+                        <span class="hobby-card__icon" aria-hidden="true">🍽️</span>
+                    </div>
+                    <h3 class="hobby-card__title">Gourmet</h3>
+                    <p class="hobby-card__text">
+                        Neue Aromen entdecken, Qualität schätzen und gutes Essen als bewusstes Erlebnis geniessen.
                     </p>
                 </article>
             </div>
         </div>
     </section>
-
-
-    <!-- „WAS MIR WICHTIG IST“ (ruhige Textsection, gleiche Module-Optik) -->
-    <section data-animate id="ueber-mich-werte" aria-labelledby="werte-heading">
-        <div class="experience-inner module">
-            <header>
-                <h2 id="werte-heading" class="section-title section-title--underline">
-                    Was mir wichtig ist
-                </h2>
-            </header>
-
-            <div class="experience-grid">
-                <article class="experience-card">
-                    <h3 class="exp-title">Verlässlichkeit</h3>
-                    <p class="exp-text">
-                        Absprachen einhalten, Verantwortung übernehmen, sauber liefern – auch wenn’s mal hektisch wird.
-                    </p>
-                </article>
-
-                <article class="experience-card">
-                    <h3 class="exp-title">Lernen &amp; Weiterentwickeln</h3>
-                    <p class="exp-text">
-                        Ich mag es, neue Themen wirklich zu verstehen und daraus etwas Praktisches zu machen – im Job wie privat.
-                    </p>
-                </article>
-
-                <article class="experience-card">
-                    <h3 class="exp-title">Einfach machen</h3>
-                    <p class="exp-text">
-                        Lieber eine gute Lösung iterativ bauen als ewig theoretisieren. Kleine Schritte – aber konstant.
-                    </p>
-                </article>
-            </div>
-        </div>
-    </section>
-
 
     <!-- CTA (gleiche Komponente wie Home) -->
     <section data-animate id="cta" aria-labelledby="cta-heading">

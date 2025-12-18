@@ -380,7 +380,7 @@ header nav a:hover {
 
 .module {
     position: relative;
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding: 3rem;
     background: rgba(15, 18, 40, 0.65);
     backdrop-filter: blur(14px);
@@ -515,6 +515,7 @@ header nav a:hover {
     border: 1px solid rgba(226, 232, 240, 0.65);
     color: var(--color-text-main);
     background: transparent;
+    cursor: pointer;
 }
 
 .project-cta:hover {
@@ -599,6 +600,64 @@ header nav a:hover {
     box-shadow: 0 0 12px rgba(249, 115, 255, 0.45), 0 0 24px rgba(56, 189, 248, 0.35), 0 4px 24px rgba(0, 0, 0, 0.6);
     transform: translateY(-1px);
 }
+
+/* =========================
+   Portrait – Highlight Ring
+   ========================= */
+
+.portrait-wrap{
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    /* Grundrahmen */
+    background: linear-gradient(
+            135deg,
+            rgba(168, 85, 247, 0.85),
+            rgba(56, 189, 248, 0.85)
+    );
+
+    padding: 3px; /* Dicke des Rings */
+
+    box-shadow:
+            0 0 0 1px rgba(148, 163, 184, 0.25),
+            0 0 35px rgba(168, 85, 247, 0.35),
+            0 0 60px rgba(56, 189, 248, 0.25);
+}
+
+/* Innerer Bildcontainer */
+.portrait-wrap::before{
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background: #020617;
+    z-index: 1;
+}
+
+.portrait-image{
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 50%;
+}
+
+.portrait-wrap:hover{
+    box-shadow:
+            0 0 0 1px rgba(168, 85, 247, 0.45),
+            0 0 45px rgba(168, 85, 247, 0.45),
+            0 0 75px rgba(56, 189, 248, 0.35);
+}
+
 
 /* =========================
    Footer – Icons & Text

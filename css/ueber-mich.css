@@ -1,0 +1,147 @@
+/* Über mich – page-spezifisch: Section Spacing wie auf den anderen Seiten */
+
+#ueber-mich-hero { padding: 3.5rem 0 2.5rem; }
+#ueber-mich-kurzportrait { padding: 3.5rem 0 2.5rem; }
+#ueber-mich-interessen { padding: 2.5rem 0 3.5rem; }
+#ueber-mich-werte { padding: 3.5rem 0 2.5rem; }
+#cta { padding: 3.5rem 0 5rem; }
+
+@media (max-width: 48rem){
+    #ueber-mich-hero { padding: 3rem 0 2rem; }
+    #ueber-mich-kurzportrait { padding: 3rem 0 2rem; }
+    #ueber-mich-interessen { padding: 2rem 0 3rem; }
+    #ueber-mich-werte { padding: 3rem 0 2rem; }
+    #cta { padding: 3rem 0 4rem; }
+}
+
+/* =========================
+   Interessen & Hobbys – Service Cards (FIX)
+   ========================= */
+
+.hobby-band{
+    padding: 0; /* Spacing kommt über #ueber-mich-interessen in ueber-mich.css */
+}
+
+.hobby-band__inner{
+    max-width: 90rem;
+    margin: 0 auto;
+    padding-inline: 5rem;
+}
+
+@media (max-width: 855px){
+    .hobby-band__inner{ padding-inline: 2rem; }
+}
+
+.hobby-band__header{
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.hobby-band__lead{
+    margin: 0;
+    max-width: 70ch;
+    color: var(--color-text-muted);
+}
+
+/* Grid: zwingend 3 Spalten auf Desktop */
+.hobby-grid{
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+@media (max-width: 900px){
+    .hobby-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card: Service-Style (Icon groß in der Mitte) */
+.hobby-card{
+    text-align: center;
+    padding: 2rem 1.75rem 1.75rem;
+    border-radius: 22px;
+
+    background: linear-gradient(
+            180deg,
+            rgba(255,255,255,0.07),
+            rgba(255,255,255,0.03)
+    );
+
+    border: 1px solid rgba(148, 163, 184, 0.22);
+
+    box-shadow:
+            0 0 0 1px rgba(120, 80, 255, 0.08) inset,
+            0 18px 60px rgba(0,0,0,0.30);
+
+    backdrop-filter: blur(10px);
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.hobby-card:hover{
+    transform: translateY(-3px);
+    border-color: rgba(168, 85, 247, 0.28);
+    box-shadow:
+            0 0 0 1px rgba(120, 80, 255, 0.12) inset,
+            0 22px 70px rgba(0,0,0,0.38);
+}
+
+/* Icon */
+.hobby-card__icon-wrap{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+/* =========================
+   Hobby Icon – dezenter Hintergrund
+   ========================= */
+
+.hobby-card__icon{
+    width: 96px;
+    height: 96px;
+    display: grid;
+    place-items: center;
+
+    border-radius: 22px;
+    font-size: 2.4rem;
+
+    /* Ruhiger, matter Hintergrund */
+    background:
+            linear-gradient(
+                    180deg,
+                    rgba(255,255,255,0.10),
+                    rgba(255,255,255,0.02)
+            ),
+            rgba(20, 24, 46, 0.55);
+
+    border: 1px solid rgba(148, 163, 184, 0.28);
+
+    /* Nur noch sanftes Halo */
+    box-shadow:
+            0 0 0 1px rgba(120, 80, 255, 0.10) inset,
+            0 10px 28px rgba(0,0,0,0.35);
+
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+
+.hobby-card:hover .hobby-card__icon{
+    transform: translateY(-6px) scale(1.03);
+}
+
+/* Typography */
+.hobby-card__title{
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+    color: rgba(255,255,255,0.92);
+}
+
+.hobby-card__text{
+    margin: 0 0 0.9rem;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.72);
+}
