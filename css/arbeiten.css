@@ -10,9 +10,8 @@
    ========================= */
 
 .current-role__wrap {
-    max-width: 1200px;
     margin-inline: auto;
-    padding-inline: 3.5rem;
+    padding-inline: 5rem;
 }
 
 .current-role__panel {
@@ -172,6 +171,102 @@
     border: 1px solid rgba(148, 163, 184, 0.35);
     color: var(--color-text-muted);
 }
+
+/* =========================
+   GitHub Insights – same design language as Arbeiten
+   ========================= */
+
+#arbeiten-github{
+    padding: 2.5rem 0 3.5rem; /* analog zu deinen Section-Spacings */
+}
+
+.github-head .role-text{
+    margin: 0;
+    max-width: 72ch;
+    color: rgba(255,255,255,0.72);
+}
+
+/* Grid wie deine anderen Layouts */
+.github-grid{
+    margin-top: 1.25rem;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px){
+    .github-grid{
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+/* Chart etwas “eingebettet”, nicht so riesig */
+.chart-wrap {
+    width: 100%;
+    max-width: 420px;        /* vorher ~520px → jetzt deutlich kompakter */
+    margin: 0.5rem auto 0;
+}
+
+.chart-wrap canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 320px;       /* verhindert „Monster-Kreis“ */
+}
+
+
+/* Repo list cards */
+.repo-list{
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.repo-item{
+    display: block;
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 0.95rem 1rem;
+
+    background: rgba(10, 12, 24, 0.35);
+    border: 1px solid rgba(180, 120, 255, 0.16);
+    box-shadow: 0 0 0 1px rgba(120, 80, 255, 0.08) inset;
+
+    transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.repo-item:hover{
+    transform: translateY(-2px);
+    border-color: rgba(180, 120, 255, 0.28);
+}
+
+.repo-top{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    align-items: baseline;
+}
+
+.repo-name{ font-weight: 650; }
+.repo-meta{ opacity: 0.8; font-size: 0.95rem; }
+.repo-desc{ margin-top: 0.35rem; opacity: 0.9; }
+.repo-foot{ margin-top: 0.6rem; font-size: 0.9rem; opacity: 0.7; }
+
+/* Buttons aligned to your CTA style */
+.repo-actions{
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.9rem;
+    flex-wrap: wrap;
+}
+
+/* Ghost variant (keine neue Button-Klasse nötig) */
+.project-cta--ghost{
+    background: transparent;
+    border: 1px solid rgba(226, 232, 240, 0.45);
+    color: rgba(255,255,255,0.92);
+}
+
 
 /* =========================
    Responsive

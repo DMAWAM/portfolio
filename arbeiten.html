@@ -154,67 +154,54 @@
         </div>
     </section>
 
-    <!-- PRIVATES PROJEKT (nutzt projects-inner + project-card wie Homepage) -->
-    <section id="arbeiten-projekt" aria-labelledby="arbeiten-projekt-heading">
-        <div class="projects-inner">
-            <header class="projects-header">
-                <h2 id="arbeiten-projekt-heading" class="section-title section-title--underline">
-                    Privates Web-Projekt
+
+    <section data-animate id="arbeiten-github" aria-labelledby="gh-title">
+        <div class="experience-inner module">
+            <header>
+                <h2 id="gh-title" class="section-title section-title--underline">
+                    Webprojekte Insights
                 </h2>
+                <p class="role-text">
+                    Live-Daten aus meinen Repositories: Tech-Stack (aggregiert) &amp; Repos – inkl. Caching und Pagination.
+                </p>
             </header>
 
-            <div class="project-card-wrapper">
-                <article class="project-card arbeiten-project-card">
-                    <div class="project-card__content">
-                        <h3 class="project-title">Gümmi Dart Masters: Resultate Liveticker </h3>
-                        <p class="project-text">
-                            Live-Scoring, Matchübersicht, Mobile-First UI – gebaut als schlanke Web-App.
-                        </p>
-                        <a href="#" class="project-cta" role="button" aria-haspopup="diallog" aria-controls="projectModal" id="openProjectModal">Projekt ansehen →</a>
+            <section class="current-role section">
+                <div class="current-role__wrap">
+                    <div class="current-role__panel">
+                        <div class="github-grid">
+
+                            <div class="focus-card">
+                                <h3>Tech-Stack (über alle Repos)</h3>
+                                <p class="muted">Aggregiert aus GitHub „Languages“ pro Repository.</p>
+                                <div class="chart-wrap">
+                                    <canvas id="ghChart"></canvas>
+                                </div>
+                                <div id="ghChartMeta" class="muted"></div>
+                            </div>
+
+                            <div class="focus-card">
+                                <h3>Repositories</h3>
+
+                                <div id="ghStatus" class="muted"></div>
+                                <div id="ghRepoList" class="repo-list"></div>
+
+                            </div>
+
+                        </div>
                     </div>
+                </div>
+            </section>
 
-                    <figure class="project-card__media">
-                        <img src="assets/dart-liveticker.png" class="arbeiten-media-placeholder" role="img" aria-label="screenshot dart liveticker">
-
-                    </figure>
-                </article>
-            </div>
         </div>
     </section>
 
-</main>
-
-<dialog class="modal" id="projectModal" aria-labelledby="projectModalTitle">
-    <div class="modal__panel">
-
-        <header class="modal__header">
-            <div>
-                <p class="modal__kicker">Privates Projekt</p>
-                <h3 class="modal__title" id="projectModalTitle">
-                    Dart Liveticker Web-App
-                </h3>
-                <p class="modal__subtitle">
-                    Live-Scoring · Matchübersicht · Mobile-First
-                </p>
-            </div>
-
-            <button class="modal__close"
-                    type="button"
-                    id="closeProjectModal"
-                    aria-label="Popup schliessen">
-                ✕
-            </button>
-        </header>
-
-        <div class="modal__body">
-            <!-- dein Content -->
-        </div>
-
-    </div>
-</dialog>
 
 
-<!-- FOOTER -->
+
+
+
+    <!-- FOOTER -->
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-line"></div>
@@ -233,8 +220,10 @@
     </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/popup.js"></script>
+<script src="js/github.js"></script>
 </body>
 </html>
