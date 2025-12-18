@@ -232,6 +232,32 @@ header nav a:hover {
    Home: Hero-Section
    ========================= */
 
+.typewriter {
+    position: relative;
+}
+
+/* Blinking caret */
+.tw-caret {
+    display: inline-block;
+    width: 0.08em;
+    height: 1em;
+    margin-left: 0.08em;
+    transform: translateY(0.08em);
+    background: currentColor;
+    opacity: 0.85;
+    animation: tw-blink 0.9s steps(1) infinite;
+}
+
+@keyframes tw-blink {
+    50% { opacity: 0; }
+}
+
+/* Accessibility: respects user setting */
+@media (prefers-reduced-motion: reduce) {
+    .tw-caret { animation: none; }
+}
+
+
 .hero-subtitle {
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
