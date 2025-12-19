@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", () => {
         attribution: "&copy; OpenStreetMap",
     }).addTo(map);
 
-    L.marker(center).addTo(map).bindPopup("Region Bern 👋");
+    L.marker(center).addTo(map).bindPopup("Region Bern");
 });
