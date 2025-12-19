@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/component.css" />
     <link rel="stylesheet" href="css/ueber-mich.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 </head>
 
 <body class="page page--ueber-mich">
@@ -154,6 +156,17 @@
         </div>
     </section>
 
+    <section class="module" id="map" aria-labelledby="map-title">
+        <div class="module__head">
+            <h2 id="map-title" class="section-title section-title--underline">Wo ich zuhause bin</h2>
+        </div>
+
+        <div class="card">
+            <div id="leafletMap" class="leaflet-map" role="application" aria-label="Karte"></div>
+
+        </div>
+    </section>
+
     <!-- CTA (gleiche Komponente wie Home) -->
     <section data-animate id="cta" aria-labelledby="cta-heading">
         <div class="cta-inner">
@@ -177,6 +190,9 @@
         </div>
     </section>
 
+
+
+
 </main>
 
 <!-- FOOTER -->
@@ -198,9 +214,11 @@
     </div>
 </footer>
 
-<!-- JS kannst du später wieder hinzufügen -->
+
 <script src="js/nav.js"></script>
 <script src="js/animations.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/map.js"></script>
 
 </body>
 </html>
