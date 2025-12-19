@@ -23,29 +23,6 @@
     grid-column: 1 / -1;
 }
 
-.field label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-}
-
-.field input,
-.field textarea {
-    width: 100%;
-    padding: 0.85rem 1rem;
-    border-radius: 1rem;
-    border: 1px solid rgba(148, 163, 184, 0.35);
-    background: rgba(12, 17, 35, 0.45);
-    color: var(--color-text-main);
-    outline: none;
-    backdrop-filter: blur(6px);
-}
-
-.field input:focus,
-.field textarea:focus {
-    border-color: rgba(56, 189, 248, 0.7);
-    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
-}
-
 .form-actions {
     display: flex;
     flex-wrap: wrap;

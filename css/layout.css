@@ -174,34 +174,6 @@
     }
 }
 
-/* WEBPROJEKTE */
-/* =========================
-   Projekte – Layout
-   ========================= */
-
-#webprojekte {
-    padding: 4.5rem 0 5rem;
-}
-
-.projects-inner {
-    max-width: 72rem;          /* ~1150px */
-    margin: 0 auto;
-    padding-inline: 5rem;      /* 80px links/rechts bei Desktop */
-}
-
-.project-card {
-    max-width: 70rem; /* oder 72rem, je nach Figma */
-    width: 100%;
-}
-
-@media (max-width: 48rem) {  /* <= 768px */
-    .projects-inner {
-        padding-inline: 1.5rem;
-    }
-}
-
-/* Die große Projektkarte */
-
 /* =========================
    Projekte – Layout
    ========================= */

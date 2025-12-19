@@ -187,30 +187,7 @@ header nav a:hover {
                 visibility 0s;
     }
 
-    .nav-toggle__icon{
-        position: relative;
-        display: block;
-        width: 18px;
-        height: 2px;
-        margin: 0 auto;
-        background: rgba(255,255,255,0.9);
-        border-radius: 999px;
-    }
-
-    .nav-toggle__icon::before,
-    .nav-toggle__icon::after{
-        content:"";
-        position: absolute;
-        left: 0;
-        width: 18px;
-        height: 2px;
-        background: rgba(255,255,255,0.9);
-        border-radius: 999px;
-        transition: transform 180ms ease, top 180ms ease, opacity 180ms ease;
-    }
-
-    .nav-toggle__icon::before{ top: -6px; }
-    .nav-toggle__icon::after{ top: 6px; }
+    /* ✅ entfernt: doppelte nav-toggle__icon Definitionen (waren 1:1 identisch zum globalen Block) */
 
     .site-header.nav-open .nav-toggle__icon{ background: transparent; }
     .site-header.nav-open .nav-toggle__icon::before{ top: 0; transform: rotate(45deg); }
@@ -843,4 +820,3 @@ header nav a:hover {
         hyphens: auto;
     }
 }
-
