@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ✅ anpassen falls dein GitHub-User anders heisst:
+
     const GH_USER = "dmawam";
 
     // Pagination

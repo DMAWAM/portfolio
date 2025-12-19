@@ -81,7 +81,7 @@ header nav a:hover {
     line-height: 1;
     flex: 0 0 44px;      /* verhindert "zusammendrücken" */
     border-radius: 999px;
-    overflow: hidden;    /* falls Safari Kanten komisch rendert */
+    overflow: hidden;
 }
 
 .nav-toggle:focus-visible{
@@ -114,7 +114,7 @@ header nav a:hover {
 .nav-toggle__icon::before{ top: -6px; }
 .nav-toggle__icon::after{ top: 6px; }
 
-/* Mobile Breakpoint: passend zu deinen bestehenden 48rem Regeln */
+/* Mobile Breakpoint */
 @media (max-width: 855px){
 
     /* Button sichtbar (rechts, gleiche Zeile wie Brand) */
@@ -134,12 +134,12 @@ header nav a:hover {
         width: 100%;
         padding: 0.75rem 1rem 1rem;
 
-        /* Look wie bei dir, aber als full-width bar */
+
         background: rgba(2, 6, 23, 0.92);
         border-top: 1px solid rgba(148, 163, 184, 0.25);
         box-shadow: 0 18px 45px rgba(15, 23, 42, 0.55);
 
-        /* dein positioning/width etc. bleibt wie du’s schon hast */
+
         display: block;                 /* wichtig für Animation */
         opacity: 0;
         transform: translateY(-10px);
@@ -151,7 +151,7 @@ header nav a:hover {
                 transform 220ms ease,
                 visibility 0s linear 220ms;   /* visibility erst nach Fade aus */
 
-        border-radius: 0; /* wichtig: keine Card-Optik */
+        border-radius: 0;
     }
 
     /* UL vertikal */
@@ -187,7 +187,7 @@ header nav a:hover {
                 visibility 0s;
     }
 
-    /* ✅ entfernt: doppelte nav-toggle__icon Definitionen (waren 1:1 identisch zum globalen Block) */
+
 
     .site-header.nav-open .nav-toggle__icon{ background: transparent; }
     .site-header.nav-open .nav-toggle__icon::before{ top: 0; transform: rotate(45deg); }
@@ -361,7 +361,7 @@ header nav a:hover {
     margin: 0 0 1.75rem;
 }
 
-/* Variante mit Unterstreichung wie im Wireframe */
+
 .section-title--underline {
     position: relative;
     padding-bottom: 0.6rem;        /* Abstand zur Linie */
@@ -375,7 +375,7 @@ header nav a:hover {
     width: 5rem;                   /* Länge der Linie ~80px */
     height: 0.22rem;               /* ca. 3–4px */
     border-radius: 999px;
-    background: #a855f7;           /* violett wie im Wireframe */
+    background: #a855f7;
     box-shadow: 0 0 18px rgba(168, 85, 247, 0.7);
 }
 
@@ -446,7 +446,7 @@ header nav a:hover {
     font-family: var(--font-heading);
     font-size: 1.25rem;               /* ~20px */
     font-weight: 600;
-    color: #A5B4FC;                   /* helles Indigo wie im Wireframe */
+    color: #A5B4FC;
     margin-bottom: 0.5rem;
 }
 
@@ -787,9 +787,6 @@ header nav a:hover {
 
 /* --- Arbeiten --- */
 
-.card--featured { /* nutzt card styling, nur ggf. mehr padding */
-    /* optional: padding: 1.5rem; */
-}
 
 .card--placeholder {
     min-height: 140px;
@@ -798,11 +795,7 @@ header nav a:hover {
     opacity: .85;
 }
 
-.card--cta {
-    /* optional: etwas “prominenter” als normale cards */
-}
-
-/* Media-Placeholder (falls noch nicht vorhanden) */
+/* Media-Placeholder  */
 .media-placeholder {
     aspect-ratio: 16 / 10;
     border-radius: 16px;
@@ -813,16 +806,16 @@ header nav a:hover {
 @media (max-width: 48rem){
     .module{
         padding: 1.5rem;
-        border-radius: 1.5rem; /* optional, wirkt auf Mobile oft harmonischer */
+        border-radius: 1.5rem;
     }
 
-    /* optional: Meta-Zeile darf umbrechen statt zu quetschen */
+
     .exp-meta{
         flex-wrap: wrap;
         row-gap: 0.25rem;
     }
 
-    /* optional: lange Wörter sauber umbrechen */
+
     .role-text{
         overflow-wrap: anywhere;
         hyphens: auto;
