@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const el = document.getElementById("leafletMap");
     if (!el || !window.L) return;
 
-    // Grob Bern-Zentrum:
-    const center = [46.948, 7.4474];
+    // Koordinaten Kerzers:
+    const center = [46.9759, 7.1956];
 
     const map = L.map("leafletMap", { scrollWheelZoom: false }).setView(center, 11);
 
@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", () => {
         attribution: "&copy; OpenStreetMap",
     }).addTo(map);
 
-    L.marker(center).addTo(map).bindPopup("Region Bern");
+    L.marker(center).addTo(map).bindPopup("aufgewachsen ursprünglich in Bern, mittlerweile in Kerzers im Freiburger Seeland zuhause");
 });

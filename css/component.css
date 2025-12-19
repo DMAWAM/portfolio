@@ -424,6 +424,14 @@ header nav a:hover {
 
 }
 
+.experience-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(168, 85, 247, 0.28);
+    box-shadow:
+            0 0 0 1px rgba(120, 80, 255, 0.12) inset,
+            0 22px 70px rgba(0,0,0,0.38);
+}
+
 .experience-card h3 {
     font-family: var(--font-heading);
     font-size: var(--font-size-lg);

@@ -40,7 +40,6 @@
 
 .hobby-band__lead{
     margin: 0;
-    max-width: 70ch;
     color: var(--color-text-muted);
 }
 
